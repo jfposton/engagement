@@ -1,0 +1,8 @@
+{
+  "name": "engagement",
+  "dependencies": {
+      "jquery": "*",
+      "bootstrap": "3.3.4",
+      "stellar.js": "*"
+  }
+}

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="css/site.css" type="text/css" rel="stylesheet">
         <title>Jonathan &amp; Taylor</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <nav class="navbar" id="navigation">
+        <nav class="navbar navbar-fixed-top" id="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -41,12 +41,32 @@
                 <!-- /.navbar-collapse -->
             </div>
         </nav>
-        <div class="bg"></div>
+        <div class="bg" data-stellar-ratio="0.5"></div>
         <div class="jumbotron">
             <div class="container"></div>
         </div>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <div class="container">
+            <div id="story" class="page-header">
+                <h1>Example page header <small>Subtext for header</small></h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="bride" class="page-header">
+                <h1>Example page header <small>Subtext for header</small></h1>
+            </div>
+            <p>Our story</p>
+        </div>
+
+        <div class="container">
+            <div id="groom" class="page-header">
+                <h1>Example page header <small>Subtext for header</small></h1>
+            </div>
+            <p>Our story</p>
+        </div>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/stellar.js/jquery.stellar.min.js"></script>
         <script src="js/site.js"></script>
     </body>
 </html>
