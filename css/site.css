@@ -6,12 +6,13 @@
 #navigation {
     background-color: white;
     height: 5em;
+    border-bottom: solid 1px black;
 }
 
 
 
 .bg {
-    margin-top: 5.5em;
+    margin-top: 5em;
     background: url('/resources/main.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
