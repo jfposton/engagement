@@ -7,6 +7,6 @@ Simply the source for a website that I made to commemorate and provide details f
 ## What technologies does it use?
 
 - Standard Web Technologies (HTML, CSS, JS)
-- [Grunt](https://gruntjs.com)
-- [Bootstrap 3.0](https://getbootstrap.com)
+- [Grunt](http://gruntjs.com)
+- [Bootstrap 3.0](http://getbootstrap.com/)
 - [stellar.js](https://github.com/markdalgleish/stellar.js)
