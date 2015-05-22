@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             },
             build: {
                 src: 'js/*.js',
-                dest: 'dist/js/<%= pkg.name %>.min.js'
+                dest: 'dist/js/site.min.js'
             }
         },
         htmlmin: {
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'dist/index.html':'index.html'
+                    'dist/index.html': 'index.html'
                 }
             }
         },
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         },
         cssmin: {
             options: {
-                shorthandCompacting: false,
+                shorthandCompacting: false
             },
             target: {
                 files: [{
@@ -42,7 +42,9 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {expand: true, src: ['resources/**'], dest: 'dist/'},
-                    {expand: false, src: ['favicon.ico', '.bowerrc', 'bower.json'], dest: 'dist/'}
+                    {expand: false, src: ['favicon.ico'], dest: 'dist/'},
+                    {expand: false, src: ['bower.json'], dest: 'dist/'},
+                    {expand: false, src: ['setup.sh'], dest: 'dist/'}
                 ]
             }
         },
@@ -53,10 +55,10 @@ module.exports = function (grunt) {
                     mode: 'zip'
                 },
                 files: [
-                    {src: ['dist/**'], dest: ''}
+                    {expand: true, cwd: 'dist/', src: ['**'], dest: ''},
                 ]
             }
-        }
+        },
     });
 
     var npmTasks = [
@@ -65,10 +67,10 @@ module.exports = function (grunt) {
         'grunt-contrib-htmlmin',
         'grunt-contrib-cssmin',
         'grunt-contrib-compress',
-        'grunt-contrib-copy'
-    ]
-
-    for(i = 0; i < npmTasks.length; i++) {
+        'grunt-contrib-copy',
+        'grunt-remove'
+    ], i = 0;
+    for (i; i < npmTasks.length; i = i + 1) {
         grunt.loadNpmTasks(npmTasks[i]);
     }
 

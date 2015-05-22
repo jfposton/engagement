@@ -1,5 +1,5 @@
 body {
-    background: #f9f9f9 url(/resources/white_texture.png) repeat top left;
+    background: #f9f9f9 url(../resources/white_texture.png) repeat top left;
 }
 
 #logo {
@@ -18,7 +18,7 @@ body {
 
 .bg {
     margin-top: 5em;
-    background: url('/resources/main.png') no-repeat center center;
+    background: url('../resources/main.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
