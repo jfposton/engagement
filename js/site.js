@@ -21,3 +21,19 @@ function initMap() {
 }
 
 google.maps.event.addDomListener(window, 'load', initMap);
+
+
+function initHeadroom() {
+    var headroom = new Headroom(document.querySelector(".navbar"), {
+      "offset": 205,
+      "tolerance": 5,
+      "classes": {
+        "initial": "animated",
+        "pinned": "flipInX",
+        "unpinned": "flipOutX"
+      }
+    });
+    headroom.init();
+}
+
+initHeadroom();

@@ -3,6 +3,8 @@
   "dependencies": {
       "jquery": "*",
       "bootstrap": "3.3.4",
-      "stellar.js": "*"
+      "stellar.js": "*",
+      "headroom.js": "0.7.0",
+      "animate.css": "*"
   }
 }
