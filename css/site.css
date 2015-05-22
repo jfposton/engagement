@@ -1,5 +1,5 @@
 body {
-    background: #f9f9f9 url(/resources/white_texture.png) repeat top left
+    background: #f9f9f9 url(/resources/white_texture.png) repeat top left;
 }
 
 #logo {
@@ -53,4 +53,10 @@ body {
 
 .page-header {
     border-bottom: 1px #CCC solid
+}
+
+#location-map {
+    height: 45em;
+    width: 75em;
+    padding-bottom: 5px;
 }

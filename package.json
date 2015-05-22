@@ -1,0 +1,11 @@
+{
+    "name": "toast-to-poston",
+    "description": "Engagement website for me and my fiance",
+    "repository": "https://github.com/jfposton/engagement",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-contrib-uglify": "~0.5.0"
+    }
+}
