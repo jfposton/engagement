@@ -8,9 +8,11 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
     </head>
     <body>
+        <!-- Basic responsive Bootstrap navbar with a pinch of custom styling to get the look I wanted -->
         <nav class="navbar navbar-fixed-top" id="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <!-- This button appears once the screen gets to small and acts as a way to open and close the menu -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navigation-menu">
                         <span class="sr-only">Toggle navigation</span>
@@ -18,9 +20,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <!-- Brand image -->
                     <a class="navbar-brand" href="#"><img id="logo" src="resources/tla.png" alt="logo" /></a>
                 </div>
-
+                <!-- Various menu items -->
                 <div class="collapse navbar-collapse" id="navigation-menu">
                     <ul class="nav navbar-nav" id="links">
                         <li><a href="#story" class="text-muted">Our Story</a></li>
@@ -38,18 +41,20 @@
                         <li><a href="#rsvp" class="text-muted">RSVP</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
         </nav>
+        <!-- Holds the main image. The main image is set as the background of this div and then stellar.js takes over -->
         <div class="bg" data-stellar-ratio="0.5"></div>
         <div id="contents">
             <div class="container">
+                <!-- Story of us-->
                 <div id="story" class="page-header">
                     <h1 class="text-center">Our Story</h1>
                 </div>
             </div>
 
             <div class="container">
+                <!-- Information about the bride-->
                 <div id="bride" class="page-header">
                     <h1 class="text-center">The Bride</h1>
                 </div>
@@ -63,6 +68,7 @@
             </div>
 
             <div class="container">
+                <!-- Information about the groom -->
                 <div class="page-header">
                     <h1 id="groom" class="text-center">The Groom</h1>
                 </div>
@@ -76,6 +82,7 @@
             </div>
 
             <div class="container">
+                <!-- INformation about the bridesmaids -->
                 <div class="page-header">
                     <h1 id="bridesmaids" class="text-center">Bridesmaids</h1>
                 </div>
@@ -131,6 +138,7 @@
             </div>
 
             <div class="container">
+                <!-- Information about the groomsmen -->
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
                         <h1 id="groomsmen" class="text-center page-header">Groomsmen</h1>
@@ -189,6 +197,7 @@
         </div>
 
         <div class="container">
+            <!-- Google maps plugin showing the location of the church -->
             <div class="row">
                 <div class="col-xs-12 col-md-12">
                     <h1 id="location" class="text-center page-header">Location</h1>
@@ -200,6 +209,7 @@
         </div>
 
         <div class="container">
+            <!-- Information about the store we are registered at -->
             <div class="row">
                 <div class="col-xs-12 col-md-12" id="registrations">
                     <h1 class="page-header text-center">Registrations</h1>
