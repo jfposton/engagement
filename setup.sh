@@ -5,6 +5,7 @@
 # Download bower dependencies
 bower install
 npm install minifier
+rm css/*.min.css js/*.min.js
 ./node_modules/minifier/index.js css/
 ./node_modules/minifier/index.js js/
 
