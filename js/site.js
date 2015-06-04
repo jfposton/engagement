@@ -37,3 +37,8 @@ function initHeadroom() {
 }
 
 initHeadroom();
+
+$('.song-list-item').click(function (event) {
+    event.preventDefault();
+    $(event.currentTarget).find('.song-list-video').toggleClass("hidden");
+});

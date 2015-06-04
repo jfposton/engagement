@@ -1,10 +1,10 @@
 {
   "name": "engagement",
   "dependencies": {
-      "jquery": "*",
-      "bootstrap": "3.3.4",
-      "stellar.js": "*",
-      "headroom.js": "0.7.0",
-      "animate.css": "*"
+    "jquery": "*",
+    "bootstrap": "3.3.4",
+    "stellar.js": "*",
+    "headroom.js": "0.7.0",
+    "animate.css": "*"
   }
 }
