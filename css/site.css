@@ -29,7 +29,7 @@ body {
     background: url('../resources/window1.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    background-position: 0px -15em;;
+    background-position: 0px -10em;
 }
 
 .main2 {
@@ -121,9 +121,37 @@ body {
 }
 
 .carousel-indicators  .active {
-    background-color: black;
+    border: 1px solid lightgray;
+}
+.carousel-control.left, .carousel-control.right {
+    background: initial;
 }
 
 .carousel-indicators {
     bottom: -1em;
+}
+
+#location-wrapper {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.list-group-item.disabled {
+    cursor: pointer;
+}
+
+#map-sidebar {
+    padding-left:5px;
+    padding-right: 0px;
+}
+
+.song-list-video-placeholder {
+    width: 420px;
+    height: 315px;
+    border: 1px lightgray solid;
+    padding-top:25%;
 }

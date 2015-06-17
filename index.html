@@ -11,11 +11,9 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <!-- Basic responsive Bootstrap navbar with a pinch of custom styling to get the look I wanted -->
         <nav class="navbar navbar-fixed-top" id="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <!-- This button appears once the screen gets to small and acts as a way to open and close the menu -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navigation-menu">
                         <span class="sr-only">Toggle navigation</span>
@@ -33,7 +31,7 @@
                         <li><a href="#bride" class="text-muted">Bride</a></li>
                         <li><a href="#groom" class="text-muted">Groom</a></li>
                         <li class="dropdown">
-                            <a href="" class="dropdown-toggle text-muted" data-toggle="dropdown" aria-expanded="false">Bridal Party<span class="caret"></span></a>
+                            <a href="" class="dropdown-toggle text-muted" data-toggle="dropdown" aria-expanded="false">Wedding Party<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#bridesmaids" class="text-muted">Bridesmaids</a></li>
                                 <li><a href="#groomsmen" class="text-muted">Groomsmen</a></li>
@@ -41,12 +39,10 @@
                         </li>
                         <li><a href="#location" class="text-muted">Location</a></li>
                         <li><a href="#registrations" class="text-muted">Registrations</a></li>
-                        <li><a href="#rsvp" class="text-muted">RSVP</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Holds the main image. The main image is set as the background of this div and then stellar.js takes over -->
         <div class="bg main" data-stellar-ratio="0.5"></div>
         <div id="contents">
             <div class="container">
@@ -55,7 +51,7 @@
                     <h1 class="text-center">Our Story</h1>
                 </div>
                 <p>
-                    <img src="resources/OurStory/bandBanquet.JPG" class="thumbnail story-pic left-hand-side" />
+                    <img src="resources/OurStory/theOriginal.JPG" class="thumbnail story-pic left-hand-side" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jonathan and Taylor met in 6th grade at Currituck 
                     County Middle School when they sat next to each other in English class. Jonathan was extremely 
                     shy and Taylor was determined to get him to speak to her by the end of the school year. After 
@@ -106,7 +102,7 @@
                 <div id="bride" class="page-header">
                     <h1 class="text-center">The Bride</h1>
                 </div>
-                <img src="resources/bride.png" alt="The Bride" class="img-thumbnail">
+                <img src="resources/bride.jpg" alt="The Bride" class="img-thumbnail">
                 <div class="page-header">
                     <h3>Taylor Dozier</h3>
                 </div>
@@ -116,7 +112,6 @@
             </div>
 
             <div class="container">
-                <!-- Information about the groom -->
                 <div class="page-header">
                     <h1 id="groom" class="text-center">The Groom</h1>
                 </div>
@@ -135,38 +130,56 @@
                                 <div class="panel-body">
                                     <ul class="list-group">
                                         <li class="list-group-item song-list-item">
-                                            <h6>Summer Song By Wavorly</h6>
-                                            <div class="song-list-video hidden text-center">
+                                            <h6>Summer Song By Wavorly <span class="glyphicon glyphicon-chevron-right"></span></h6>
+                                            <div class="song-list-video hidden text-center" data-src="https://www.youtube.com/embed/qqAFf5LAsV0">
                                                 <hr />
-                                                <iframe width="420" height="315" src="https://www.youtube.com/embed/qqAFf5LAsV0" frameborder="0" allowfullscreen></iframe>
+                                                <div class="song-list-video-placeholder" >
+                                                    <img height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif"/>
+                                                </div>
                                             </div>
                                         </li>
                                         <li class="list-group-item song-list-item">
-                                            <h6>Best Thing By Relient K</h6>
-                                            <div class="song-list-video hidden text-center">
+                                            <h6>Best Thing By Relient K <span class="glyphicon glyphicon-chevron-right"></span></h6>
+                                            <div class="song-list-video hidden text-center" data-src="https://www.youtube.com/embed/KhR-2phsGdA">
                                                 <hr />
-                                                <iframe width="420" height="315" src="https://www.youtube.com/embed/KhR-2phsGdA" frameborder="0" allowfullscreen></iframe>
+                                                <div class="song-list-video-placeholder" >
+                                                    <img height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif"/>
+                                                </div>
                                             </div>
                                         </li>
                                         <li class="list-group-item song-list-item">
-                                            <h6>Every Little Thing By Hawk Nelson</h6>
-                                            <div class="song-list-video hidden text-center">
+                                            <h6>Every Little Thing By Hawk Nelson <span class="glyphicon glyphicon-chevron-right"></span></h6>
+                                            <div class="song-list-video hidden text-center" data-src="https://www.youtube.com/embed/Sb9Ch8g3hfY">
                                                 <hr />
-                                                <iframe width="420" height="315" src="https://www.youtube.com/embed/Sb9Ch8g3hfY" frameborder="0" allowfullscreen></iframe>
+                                                <div class="song-list-video-placeholder" >
+                                                    <img height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif"/>
+                                                </div>
                                             </div>
                                         </li>
                                         <li class="list-group-item song-list-item">
-                                            <h6>Perfect Chemistry By Nevertheless</h6>
-                                            <div class="song-list-video hidden text-center">
+                                            <h6>Perfect Chemistry By Nevertheless <span class="glyphicon glyphicon-chevron-right"></span></h6>
+                                            <div class="song-list-video hidden text-center" data-src="https://www.youtube.com/embed/PUCgmhc2A5g">
                                                 <hr />
-                                                <iframe width="420" height="315" src="https://www.youtube.com/embed/PUCgmhc2A5g" frameborder="0" allowfullscreen></iframe>
+                                                <div class="song-list-video-placeholder" >
+                                                    <img height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif"/>
+                                                </div>
                                             </div>
                                         </li>
                                         <li class="list-group-item song-list-item">
-                                            <h6>I'm Taking You With Me By Relient K</h6>
-                                            <div class="song-list-video hidden text-center">
+                                            <h6>I'm Taking You With Me By Relient K <span class="glyphicon glyphicon-chevron-right"></span></h6>
+                                            <div class="song-list-video hidden text-center" data-src="https://www.youtube.com/embed/CvG5TLd8yGc">
                                                 <hr />
-                                                <iframe width="420" height="315" src="https://www.youtube.com/embed/CvG5TLd8yGc" frameborder="0" allowfullscreen></iframe>
+                                                <div class="song-list-video-placeholder" >
+                                                    <img height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif"/>
+                                                </div>                                            </div>
+                                        </li>
+                                        <li class="list-group-item song-list-item">
+                                            <h6>Bright By Echosmith <span class="glyphicon glyphicon-chevron-right"></span></h6>
+                                            <div class="song-list-video hidden text-center" data-src="https://www.youtube.com/embed/kMAzstG5O7E">
+                                                <hr />
+                                                <div class="song-list-video-placeholder" >
+                                                    <img height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif"/>
+                                                </div>  
                                             </div>
                                         </li>
                                     </ul>
@@ -176,12 +189,12 @@
                         <div class="col-xs-1 col-md-6">
                             <div class="panel panel-default ">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Favorite Moment With Her</h3>
+                                    <h3 class="panel-title">Favorite Moment With Taylor</h3>
                                 </div>
                                 <div class="panel-body">
                                     <p>
                                         My favorite moment with Taylor is a really hard question. Of course our trip to Disney World was a really good time. 
-                                        But honestly anytime where we I get to make her laugh and smile is the new best day. I know it's cheesy but its the truth.
+                                        But honestly anytime when we are together and I get to make her laugh and smile is the new best day. I know it's cheesy but its the truth.
                                     </p>
                                 </div>
                             </div>
@@ -201,11 +214,11 @@
                                             <div class="item active">
                                                 <p class="text-center lead">
                                                     And the day that I finally can take you home <br/>
-                                                    There’s no way that I’m ever, ever letting go <br/>
-                                                    We’ll be ok, though miles may separate <br/>
-                                                    There’s no space between our hearts <br/>
+                                                    There's no way that I'm ever, ever letting go <br/>
+                                                    We'll be ok, though miles may separate <br/>
+                                                    There's no space between our hearts <br/>
                                                     And this day, I choose to keep loving you <br/>
-                                                    As if it were a choice, I can’t stop falling in love
+                                                    As if it were a choice, I can't stop falling in love
                                                 </p>
                                             </div>
                                             <div class="item">
@@ -262,8 +275,7 @@
                     <div class="thumbnail">
                         <img class="bridal-party" src="resources/bridesmaids/mallory.jpg" alt="...">
                         <div class="caption">
-                            <h4>Mallory Miller <small>Maid of Honor</small></h4>
-                            <p> Blah blah blah</p>
+                            <h3>Mallory Miller <small>Maid of Honor</small></h3>
                         </div>
                     </div>
                 </div>
@@ -274,7 +286,6 @@
                         <img class="bridal-party" src="resources/bridesmaids/alexis.jpg" alt="...">
                         <div class="caption">
                             <h4>Alexis Kovolenko</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -283,7 +294,6 @@
                         <img class="bridal-party" src="resources/bridesmaids/angela.jpg" alt="...">
                         <div class="caption">
                             <h4>Angela Leahey</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -292,7 +302,6 @@
                         <img class="bridal-party" src="resources/bridesmaids/anna.jpg" alt="...">
                         <div class="caption">
                             <h4>Anna Poston</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -301,7 +310,6 @@
                         <img class="bridal-party" src="resources/bridesmaids/michelle.jpg" alt="...">
                         <div class="caption">
                             <h4>Michelle Page</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -311,7 +319,6 @@
         <div class="bg main3" data-stellar-ratio="0.5"></div>
 
         <div class="container">
-            <!-- Information about the groomsmen -->
             <div class="row">
                 <div class="col-xs-12 col-md-12">
                     <h1 id="groomsmen" class="text-center page-header">Groomsmen</h1>
@@ -322,8 +329,7 @@
                     <div class="thumbnail">
                         <img class="bridal-party" src="resources/groomsmen/jon.jpg" alt="...">
                         <div class="caption">
-                            <h4>Jon Poston <small>Best Man</small></h4>
-                            <p> Blah blah blah</p>
+                            <h3>Jon Poston <small>Best Man</small></h3>
                         </div>
                     </div>
                 </div>
@@ -333,8 +339,7 @@
                     <div class="thumbnail">
                         <img class="bridal-party" src="resources/groomsmen/thomas.jpg" alt="...">
                         <div class="caption">
-                            <h4>Thomas Poston <small>Maid of Honor</small></h4>
-                            <p> Blah blah blah</p>
+                            <h4>Thomas Poston</h4>
                         </div>
                     </div>
                 </div>
@@ -343,7 +348,6 @@
                         <img class="bridal-party" src="resources/groomsmen/tyler.jpg" alt="...">
                         <div class="caption">
                             <h4>Tyler Camden</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -352,7 +356,6 @@
                         <img class="bridal-party" src="resources/groomsmen/brandon.jpg" alt="...">
                         <div class="caption">
                             <h4>Brandon Dozier</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -361,7 +364,6 @@
                         <img class="bridal-party" src="resources/groomsmen/bradley.jpg" alt="...">
                         <div class="caption">
                             <h4>Bradley Cook</h4>
-                            <p> Blah blah blah</p>
                         </div>
                     </div>
                 </div>
@@ -372,14 +374,27 @@
     <div class="bg main4" data-stellar-ratio="0.5"></div>
 
     <div class="container">
-        <!-- Google maps plugin showing the location of the church -->
-        <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <h1 id="location" class="text-center page-header">Location</h1>
-            </div>
+        <div class="col-xs-12 col-md-12">
+            <h1 id="location" class="text-center page-header">Location</h1>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-1 center" id="location-map">  </div>
+    </div>
+    <div class="row" id="location-wrapper">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-xs-1 col-md-2" id="map-sidebar">
+                    <ul class="list-group">
+                        <li role="presentation" class="list-group-item disabled">Venues</li>
+                        <li role="presentation" class="list-group-item clickable active map-link" data-loc="church">Providence Baptist Church <br /><small>Wedding</small></li>
+                        <li role="presentation" class="list-group-item clickable map-link" data-loc="pines">The Pines at Elizabeth City<br /><small>Reception</small></li>
+                    </ul>
+                    <ul class="list-group">
+                        <li role="presentation" class="list-group-item disabled">Lodging</li>
+                        <li role="presentation" class="list-group-item clickable map-link" data-loc="fairfieldInn">Fairfield Inn</li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-10 pull-right" id="location-map">  </div>
+            </div>
         </div>
     </div>
 
@@ -391,14 +406,29 @@
             </div>
         </div>
     </div>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.extra.js"></script>
-    <script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.bg.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/stellar.js/jquery.stellar.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="bower_components/headroom.js/dist/headroom.min.js"></script>
-    <script src="js/site.min.js"></script>
-    <script src="js/site.js"></script>
-    </body>
-</html>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12" id="images">
+                <h1 class="page-header text-center">Wedding Photos</h1>
+                <p class="text-center">Want to make sure everyone sees your photos? Just add the <a target="_blank" href="https://instagram.com/explore/tags/toasttoposton/">#ToastToPoston</a> tag to your instagram photos!</p>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/bd/?u=al9wb3N0b24xOXxpbnwyMDB8NXwzfHx5ZXN8MjB8ZmFkZUlufG9uU3RhcnR8eWVzfHllcw==&ve=160615" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+                        <!-- Swap out these iframes once actual pictures are up for #ToastToPoston
+<iframe src="http://snapwidget.com/bd/?h=dG9hc3R0b3Bvc3RvbnxpbnwyMDB8NXwzfHx5ZXN8MjB8ZmFkZUlufG9uU3RhcnR8eWVzfHllcw==&ve=160615" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>-->
+                    </div>
+                </div>
+            </div>
+            <script src="bower_components/jquery/dist/jquery.min.js"></script>
+            <script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.extra.js"></script>
+            <script src="bower_components/lazyloadxt/dist/jquery.lazyloadxt.bg.js"></script>
+            <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="bower_components/stellar.js/jquery.stellar.min.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4"></script>
+            <script src="bower_components/headroom.js/dist/headroom.min.js"></script>
+            <script src="js/site.js"></script>
+            <script src="js/map.js"></script>
+            </body>
+        </html>

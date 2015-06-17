@@ -1,37 +1,17 @@
-function initMap() {
-    var mapOptions = {
-        center: new google.maps.LatLng(36.411266, -76.09243),
-        zoom: 14,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false
-    };
-    var map = new google.maps.Map(document.getElementById("location-map"), mapOptions);
-
-    var marker = new google.maps.Marker({
-        position: mapOptions.center,
-        map: map,
-        title: 'Providence Baptist Church'
-    });
-
-    var infoWindow = new google.maps.InfoWindow({
-        content: "<h5><u>Providence Baptist Church</u></h5><p>765 Shawboro Rd, Shawboro, NC 27973</p>"
-    });
-
-    infoWindow.open(map, marker);
-}
-
-google.maps.event.addDomListener(window, 'load', initMap);
-
-
 function initHeadroom() {
     var headroom = new Headroom(document.querySelector(".navbar"), {
-      "offset": 205,
-      "tolerance": 5,
-      "classes": {
-        "initial": "animated",
-        "pinned": "flipInX",
-        "unpinned": "flipOutX"
-      }
+        "offset": 205,
+        "tolerance": 5,
+        "classes": {
+            "initial": "animated",
+            "pinned": "flipInX",
+            "unpinned": "flipOutX"
+        },
+        "classes": {
+            "initial": "animated",
+            "pinned": "flipInX",
+            "unpinned": "flipOutX"
+        }
     });
     headroom.init();
 }
@@ -40,5 +20,8 @@ initHeadroom();
 
 $('.song-list-item').click(function (event) {
     event.preventDefault();
-    $(event.currentTarget).find('.song-list-video').toggleClass("hidden");
+    video = $(event.currentTarget).find('.song-list-video');
+    video.toggleClass("hidden");
+    $(event.currentTarget).find('span').toggleClass('glyphicon-chevron-down');
+    $(event.currentTarget).find('.song-list-video-placeholder').replaceWith('<iframe width="420" height="315" src="' + video.data('src') + '" frameborder="0" allowfullscreen></iframe>')
 });
