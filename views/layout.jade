@@ -1,7 +1,11 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title=head.title
+    each link in head.link
+        link(href=link, rel="stylesheet", type="text/css")
   body
-    block content
+      include common/header.jade
+      block content
+      each s in scripts
+          script(src=s)
