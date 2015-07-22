@@ -2,8 +2,9 @@ include common/common-mixins.jade
 doctype html
 html
   head
-    title=head.title
     meta(name="viewport", content="width=device-width")
+    title
+        block title
     each link in head.link
         link(href=link, rel="stylesheet", type="text/css")
   body
