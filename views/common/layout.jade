@@ -7,7 +7,7 @@ html
     each link in head.link
         link(href=link, rel="stylesheet", type="text/css")
   body
-      include common/header.jade
+      include header.jade
       block content
       each s in scripts
           script(src=s)
