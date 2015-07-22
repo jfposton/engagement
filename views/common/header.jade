@@ -2,10 +2,10 @@ mixin navbarButton(text, destination)
     li
         a.text-muted(href=destination)=text
 
-nav.navbar.navbar-fixed-top#navigation
+nav.navbar.navbar-fixed-top.navbar-default#navigation
     div.container-fluid
         div.navbar-header
-            button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navigation-menu")
+            button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navigation-menu", aria-expanded="false")
                 span.sr-only="Toggle navigation"
                 span.icon-bar
                 span.icon-bar
