@@ -1,13 +1,9 @@
-extends layout
+extends common/showcase
 block title
     | Bride
-block content
-    +stellarImage("0.5", "images/bride.jpg")(class="bg bride", style="fixed")
-    div#contents
-        div.container
-            div#bride
-                h1.text-center The Bride
-            div.page-header
-                h3 Taylor Dozier
-            p Bio
-    
+block text
+    div#bride
+        h1.text-center The Bride
+    div.page-header
+        h3 Taylor Dozier
+    p Bio
