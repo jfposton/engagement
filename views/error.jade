@@ -1,6 +1,18 @@
 extends layout
 
+block title
+    | Error :(
+
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    div(style="margin-top: 5em;")
+        div.container
+            h1
+                | #{message}
+                span.small= status
+            h4= "There seems to have been an error!"
+            p
+                | If you don't know how you got here try one of the links above to get back on track.
+                | Otherwise you can report this issue on
+                a(href="https://github.com/jfposton/engagement/issues")= "Github."
+            if error.stack
+                pre #{error.stack}
