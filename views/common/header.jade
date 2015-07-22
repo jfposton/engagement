@@ -10,19 +10,19 @@ nav.navbar.navbar-fixed-top.navbar-default#navigation
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-            a.navbar-brand(href="#")
+            a.navbar-brand(href="/")
                 img#logo(src="images/tla.png", alt="logo")
         div.collapse.navbar-collapse#navigation-menu
             ul.nav.navbar-nav#links
-                +navbarButton("Our Story", "#story")
-                +navbarButton("Bride", "#bride")
-                +navbarButton("Groom", "#groom")
+                +navbarButton("Our Story", "/story")
+                +navbarButton("Bride", "/bride")
+                +navbarButton("Groom", "/groom")
                 li.dropdown
                     a.dropdown-toggle.text-muted(href="", data-toggle="dropdown", aria-expanded="false")
                         Wedding Party
                         span.caret
                     ul.dropdown-menu(role="menu")
-                        +navbarButton("Bridesmaids", "#bridesmaids")
-                        +navbarButton("Groomsmen", "#groomsmen")
-                +navbarButton("Location", "#location")
-                +navbarButton("Registrations", "#registrations")
+                        +navbarButton("Bridesmaids", "/bridesmaids")
+                        +navbarButton("Groomsmen", "/groomsmen")
+                +navbarButton("Location", "/location")
+                +navbarButton("Registrations", "/registrations")
