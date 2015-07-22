@@ -1,36 +1,46 @@
 var merge = require('merge');
-var common = {
-    head: {
-        title: "Toast to Poston",
-        link: [
-            "vendor/bootstrap/dist/css/bootstrap.min.css",
-            "vendor/animate.css/animate.min.css",
-            "stylesheets/site.css",
+function common() {
+    return {
+        head: {
+            title: "Toast to Poston",
+            link: [
+                "vendor/bootstrap/dist/css/bootstrap.min.css",
+                "vendor/animate.css/animate.min.css",
+                "stylesheets/site.css",
+            ]
+        },
+        scripts: [
+            "vendor/jquery/dist/jquery.min.js",
+            "vendor/bootstrap/dist/js/bootstrap.min.js",
+            "vendor/stellar.js/jquery.stellar.min.js",
+            "vendor/headroom.js/dist/headroom.min.js",
+            "javascripts/site.js",
         ]
-    },
-    scripts: [
-        "vendor/jquery/dist/jquery.min.js",
-        "vendor/bootstrap/dist/js/bootstrap.min.js",
-        "vendor/stellar.js/jquery.stellar.min.js",
-        "vendor/headroom.js/dist/headroom.min.js",
-        "javascripts/site.js",
-    ]
+    }
 }
 
 var location = function() {
-    merge(common.scripts, [
+    var commonData = common();
+    merge(commonData.scripts, [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
         "javascripts/map.js"
     ]);
-    return common;
+    return commonData;
+}
+
+function setImagePath(imagePath)
+{
+    var commonData = common();
+    commonData.imagePath = imagePath;
+    return commonData;
 }
 
 var pages = {
-    story: common,
-    bride: common,
-    groom: common,
-    weddingParty: common,
-    error: common,
+    story: setImagePath("images/main-v1.png"),
+    bride: setImagePath("images/bride.jpg"),
+    groom: common(),
+    weddingParty: common(),
+    error: common(),
     location: location()
 }
 
