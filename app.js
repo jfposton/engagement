@@ -45,7 +45,6 @@ app.use(function(error, request, response, next) {
     data.message = error.message;
     data.status = error.status;
     data.error = app.get('env') === 'development' ? error : {};
-    console.log(data);
     response.render('error', data);
 });
 
