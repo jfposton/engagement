@@ -1,6 +1,6 @@
 function initHeadroom() {
     var headroom = new Headroom(document.querySelector(".navbar"), {
-        "offset": 205,
+        "offset": 50,
         "tolerance": 5,
         "classes": {
             "initial": "animated",
