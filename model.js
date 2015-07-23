@@ -40,6 +40,7 @@ var pages = {
     bride: setImagePath("images/bride.jpg"),
     groom: setImagePath("images/groom.png"),
     bridalParty: setImagePath("images/main4.JPG"),
+    groomsmen: setImagePath("images/main3.JPG"),
     error: common(),
     location: location()
 }

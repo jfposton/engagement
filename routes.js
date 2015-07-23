@@ -12,5 +12,6 @@ router.get(/^\/(story)?$/, renderTemplate('story'));
 router.get('/bride', renderTemplate('bride'));
 router.get('/groom', renderTemplate('groom'));
 router.get('/bridalParty', renderTemplate('bridalParty'));
+router.get('/groomsmen', renderTemplate('groomsmen'));
 
 module.exports = router;
