@@ -9,6 +9,10 @@ block text
         div.panel.panel-default
             div.panel-body
                 div.row
+                    div.col-xs-12.col-md-0.col-lg-0.col-xl-0
+                        div.alert.alert-info(role="alert")
+                             | The map on this page is best viewed on a wide screen device. If you are on a mobile device consider rotating your device or moving to a different device.
+                div.row
                      div.col-xs-12.col-md-12#map-sidebar
                          ul.nav.nav-pills
                             li.active(role="presentation")
@@ -29,4 +33,4 @@ block text
                                      li(role="presentation")
                                         a.map-link(data-loc="fairfieldInn")
                                             | Fairfield Inn
-                div.col-xs-12.col-md-10.pull-right#location-map
+                    div.col-xs-12.col-md-10.pull-right#location-map

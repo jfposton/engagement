@@ -86,4 +86,13 @@ if (google == undefined) {
         event.currentTarget.parentElement.parentElement.querySelector('.active').classList.remove('active');
         event.currentTarget.classList.add('active');
     });
+
+    function displayAlert() {
+        if ($(window).width() > 400) {
+            $('.alert.alert-info').hide();
+        }
+    }
+
+    $(window).load(displayAlert);
+    $(window).resize(displayAlert);
 }
