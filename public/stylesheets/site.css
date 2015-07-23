@@ -16,43 +16,6 @@ body {
     border-bottom: solid 1px black;
 }
 
-.bg {
-    margin-top: 5em;
-    width: 100%;
-    top:0;
-    left:0;
-    z-index: -1;
-}
-
-.main {
-    background: url('../images/window1.jpg') no-repeat fixed;
-    background-size: cover;
-    background-position-y: -10em;
-}
-
-.bride {
-    background: url('../images/bride.jpg') no-repeat fixed;
-    background-position-y: -5em;
-}
-
-.main2 {
-    background: url('../images/main2.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.main3 {
-    background: url('../images/main3.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.main4 {
-    background: url('../images/main4.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 #links {
     position: relative;
     top: 50%;
@@ -64,8 +27,7 @@ body {
 }
 
 #location-map {
-    height: 45em;
-    width: 75em;
+    width: 100%;
     padding-bottom: 5px;
 }
 
@@ -160,4 +122,8 @@ body {
     z-index: 900;
     width: 100%;
     background: #f9f9f9 url(../images/white_texture.png) repeat top left;
+}
+
+.nav-pills {
+    padding: 2em;
 }

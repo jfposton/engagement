@@ -1,0 +1,32 @@
+extends common/showcase
+block title
+    | Where to Go
+block text
+    div.col-xs-12.col-md-12
+        h1#location.text-center.page-header
+            | Location
+    div.row#location-wrapper
+        div.panel.panel-default
+            div.panel-body
+                div.row
+                     div.col-xs-12.col-md-12#map-sidebar
+                         ul.nav.nav-pills
+                            li.active(role="presentation")
+                                a.map-link(data-loc="church")
+                                    | Providence Baptist Church
+                                    em
+                                        small= " Wedding"
+                            li(role="presentation")
+                                a.map-link(data-loc="pines")
+                                    | The Pines at Elizabeth City
+                                    em
+                                        small= " Reception"
+                            li.dropdown(role="presentation")
+                                a.dropdown-toggle(data-toggle="dropdown", href="#", role="button" ariahaspopup="true" aria-expanded="false")
+                                    | Lodging
+                                    span.caret
+                                ul.dropdown-menu
+                                     li(role="presentation")
+                                        a.map-link(data-loc="fairfieldInn")
+                                            | Fairfield Inn
+                div.col-xs-12.col-md-10.pull-right#location-map

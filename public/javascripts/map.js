@@ -53,7 +53,11 @@ if (google == undefined) {
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             scrollwheel: false
         };
-        map = new google.maps.Map(document.getElementById("location-map"), mapOptions);
+        
+        var mapElement = document.getElementById("location-map");
+        var $mapElement = $(mapElement);
+        $mapElement.height($mapElement.width() * .50);
+        map = new google.maps.Map(mapElement, mapOptions);
 
         for (name in mapData) {
             markerInfo = mapData[name]["markerData"];

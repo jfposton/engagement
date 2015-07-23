@@ -13,5 +13,6 @@ router.get('/bride', renderTemplate('bride'));
 router.get('/groom', renderTemplate('groom'));
 router.get('/bridalParty', renderTemplate('bridalParty'));
 router.get('/groomsmen', renderTemplate('groomsmen'));
+router.get('/location', renderTemplate('location'));
 
 module.exports = router;
