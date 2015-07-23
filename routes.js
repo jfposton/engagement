@@ -9,7 +9,7 @@ function renderTemplate(template) {
 }
 
 router.get(/^\/(story)?$/, renderTemplate('story'));
-
 router.get('/bride', renderTemplate('bride'));
+router.get('/bridalParty', renderTemplate('bridalParty'));
 
 module.exports = router;

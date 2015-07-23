@@ -18,11 +18,11 @@ nav.navbar.navbar-fixed-top.navbar-default#navigation
                 +navbarButton("Bride", "/bride")
                 +navbarButton("Groom", "/groom")
                 li.dropdown
-                    a.dropdown-toggle.text-muted(href="", data-toggle="dropdown", aria-expanded="false")
+                    a.dropdown-toggle.text-muted(href="/weddingParty", data-toggle="dropdown", aria-expanded="false")
                         Wedding Party
                         span.caret
                     ul.dropdown-menu(role="menu")
-                        +navbarButton("Bridesmaids", "/bridesmaids")
-                        +navbarButton("Groomsmen", "/groomsmen")
+                        +navbarButton("Bridesmaids", "/weddingParty#bridesmaids")
+                        +navbarButton("Groomsmen", "/weddingParty#groomsmen")
                 +navbarButton("Location", "/location")
                 +navbarButton("Registrations", "/registrations")
