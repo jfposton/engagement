@@ -157,7 +157,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: 10000;
+    z-index: 900;
     width: 100%;
     background: #f9f9f9 url(../images/white_texture.png) repeat top left;
 }
