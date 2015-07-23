@@ -1,4 +1,3 @@
-var merge = require('merge');
 function common() {
     return {
         head: {
@@ -20,11 +19,14 @@ function common() {
 }
 
 var location = function() {
-    var commonData = common();
-    merge(commonData.scripts, [
+    var commonData = setImagePath("images/main3-v1.jpg");
+    var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
         "javascripts/map.js"
-    ]);
+    ];
+    requiredScripts.forEach(function(currentValue, index, array) {
+        commonData.scripts.push(currentValue);
+    });
     return commonData;
 }
 
