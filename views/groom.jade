@@ -1,0 +1,113 @@
+mixin songListItem(title, url)
+    li.list-group-item.song-list-item
+        h6= title
+            span.glyphicon.glyphicon-chevron-right
+        div.song-list-video.hidden.text-center(data-src=url)
+            hr
+            div.song-list-video-placeholder
+                img(height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif")
+
+mixin caroselIndicators(target, quantity)
+    ol.carousel-indicators
+        li.active(data-target=target, data-slide-to=0)
+        - var n = 1
+        while n < quantity
+            li(data-target=target data-slide-to=n++)
+
+mixin quote
+    div.item(class!=attributes.class)
+        p.text-center.lead
+            block
+
+
+extends common/showcase
+block title
+    | Groom
+block text
+    div.row
+        div.col-xs-12.col-md-12
+            div.page-header
+                h1#groom.text-center
+                    | The Groom
+    div.row
+        div.col-xs-12.col-md-12
+            div.page-header
+                h3
+                    | Jonathan Poston
+    div.row
+        div.col-xs-12.col-md-6
+            div.panel.panel-default
+                div.panel-heading
+                    h3.panel-title
+                        | Songs That Remind Me of Taylor
+                div.panel-body
+                    ul.list-group
+                        +songListItem("Summer Song By Wavorly", "https://www.youtube.com/embed/qqAFf5LAsV0")
+                        +songListItem("Best Thing By Relient K", "https://www.youtube.com/embed/KhR-2phsGdA")
+                        +songListItem("Every Little Thing By Hawk Nelson", "https://www.youtube.com/embed/Sb9Ch8g3hfY")
+                        +songListItem("Perfect Chemistry By Nevertheless", "https://www.youtube.com/embed/PUCgmhc2A5g")
+                        +songListItem("I'm Taking You with Me By Relient K", "https://www.youtube.com/embed/CvG5TLd8yGc")
+                        +songListItem("Bright By Echosmith", "https://www.youtube.com/embed/kMAzstG5O7E")
+        div.col-xs-12.col-md-6
+            div.panel.panel-default
+                div.panel-heading
+                    h3.panel-title
+                        | Favorite Moment With Taylor
+                div.panel-body
+                    p
+                        | My favorite moment with Taylor is a really hard question. Of course our trip to Disney World was a really good time.
+                        | But honestly anytime when we are together and I get to make her laugh and smile is the new best day. I know it's cheesy but its the truth.
+            div.panel.panel-default
+                div.panel-heading
+                    h3.panel-title
+                        | Quotes That Remind Me of Taylor
+                div.panel-body
+                    div#taylor-quotes.carousel.slide(data-ride="carousel" data-interval="false")
+                        +caroselIndicators("#taylor-quotes", 3)
+                        div.carousel-inner#quote-carousel(role="listbox")
+                            +quote(class="active")
+                                | And the day that I finally can take you home
+                                br
+                                | There's no way that I'm ever, ever letting go
+                                br
+                                | We'll be ok, though miles may separate
+                                br
+                                | There's no space between our hearts
+                                br
+                                | And this day, I choose to keep loving you
+                                br
+                                | As if it were a choice, I can't stop falling in love
+                            +quote
+                                | She sits there all alone
+                                br
+                                | She's reading from a chapter
+                                br
+                                | that she sometimes calls her own
+                                br
+                                | And now she's taken over me
+                                br
+                                | This girl I once rejected
+                                br
+                                | Has now become the girl of my dreams
+                            +quote
+                                | I may not be her perfect chemistry
+                                br
+                                | But if I can love her like you do
+                                br
+                                | It's all she needs
+                                br
+                                |
+                                | I haven't found the remedy
+                                br
+                                | For every tear she'll cry
+                                br
+                                | But I'll try to be the one who's by her side
+                                br
+                        a.left.carousel-control(href="#taylor-quotes",role="button",data-slide="prev")
+                            span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                            span.sr-only
+                                | Previous
+                        a.right.carousel-control(href="#taylor-quotes", role="button", data-slide="next")
+                            span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                            span.sr-only
+                                | Next

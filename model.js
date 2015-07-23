@@ -38,7 +38,7 @@ function setImagePath(imagePath)
 var pages = {
     story: setImagePath("images/main-v1.png"),
     bride: setImagePath("images/bride.jpg"),
-    groom: common(),
+    groom: setImagePath("images/groom.png"),
     bridalParty: setImagePath("images/main4.JPG"),
     error: common(),
     location: location()
