@@ -13,6 +13,7 @@ function common() {
             "vendor/bootstrap/dist/js/bootstrap.min.js",
             "vendor/stellar.js/jquery.stellar.min.js",
             "vendor/headroom.js/dist/headroom.min.js",
+            "vendor/masonry/dist/masonry.pkgd.js",
             "javascripts/site.js",
         ]
     }
