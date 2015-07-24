@@ -1,6 +1,6 @@
 #/bin/bash
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) 
+echo $NODE_ENV
+command -v forever >/dev/null 2>&1 || npm install -g forever
 
-command -v forever >/dev/null 2>&1 || sudo npm install -g forever
-
-sudo forever -a -m 10 -l /var/log/forever/forever.log -o /var/log/forever/outfile.log -e /var/log/forever/errfile.log --workingDir $DIR start $DIR/bin/www
+forever -a -m 10 -l /var/log/forever/forever.log -o /var/log/forever/outfile.log -e /var/log/forever/errfile.log --workingDir $DIR start $DIR/bin/www
