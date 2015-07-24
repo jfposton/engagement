@@ -1,3 +1,8 @@
+var fs = require('fs');
+var junk = require('junk');
+var readChunk = require('read-chunk');
+var imageType = require('image-type');
+
 function common() {
     return {
         head: {
@@ -38,16 +43,30 @@ function setImagePath(imagePath)
     return commonData;
 }
 
+function gallery()
+{
+    var commonData = common();
+    commonData.galleryPhotos = [];
+    fs.readdirSync('public/images/gallery').forEach(function(currentItem, index, array) {
+        var buffer = readChunk.sync('public/images/gallery/' + currentItem, 0, 12);
+        if (imageType(buffer) !== null) {
+            commonData.galleryPhotos.push('images/gallery/' + currentItem);
+        }
+    });
+    return commonData;
+}
+
 var pages = {
-    story: setImagePath("images/main-v1.png"),
-    bride: setImagePath("images/bride.jpg"),
-    groom: setImagePath("images/groom.png"),
-    bridalParty: setImagePath("images/main4.JPG"),
-    groomsmen: setImagePath("images/main3.JPG"),
-    error: common(),
-    location: location()
+    story: function() {return setImagePath("images/main-v1.png")},
+    bride: function() {return setImagePath("images/bride.jpg")},
+    groom: function() {return setImagePath("images/groom.png")},
+    bridalParty: function() {return setImagePath("images/main4.JPG")},
+    groomsmen: function() {return setImagePath("images/main3.JPG")},
+    error: common,
+    location: location,
+    gallery: gallery
 }
 
 module.exports = function (page) {
-    return pages[page];
+    return pages[page]();
 }
