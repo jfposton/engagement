@@ -1,0 +1,61 @@
+mixin thumbnail(src, index)
+    div.col-xs-6.col-md-4.grid-item
+        a.thumbnail(data-toggle="modal", data-target="div.modal", data-index=index)
+                img.image(src=src)
+
+extends common/layout
+block title
+    | Photo Gallery
+block content
+    div.container(style="padding-top: 6em;")
+        div.page-header
+            h1= "Photo Gallery"
+        div.alert.alert-success(role="alert")
+            h3
+                | Want to see photos of the wedding? 
+            p 
+                | Be sure to use 
+                a(href="https://tagboard.com/toasttoposton/search")= "#ToastToPoston"
+                |  on your social media
+                a(href="https://instagram.com/explore/tags/toasttoposton/")=" Instagram"
+                | ,
+                a(href="https://twitter.com/hashtag/toasttoposton")= " Twitter"
+                | , and
+                a(href="https://www.facebook.com/hashtag/toasttoposton")=" Facebook!"
+        div.row.grid
+            each value, index in galleryPhotos
+                +thumbnail(value, index)
+    div#galleryModal.modal.fade
+        div.modal-dialog
+            div.modal-content
+                div.modal-header
+                    button.close#galleryClose(type="button", data-dismiss="modal", aria-label="Close")
+                        span(aria-hidden="true")!= "&times;"
+
+                div.modal-body
+                    - var numberOfGalleryPhotos = galleryPhotos.length
+                    div#galleryCarousel.carousel.slide(data-ride="carousel", data-interval="false" )
+                        ol.carousel-indicators
+                            - var i = 0
+                            while i < numberOfGalleryPhotos
+                                if i == 0
+                                    li.active(data-target="#galleryCarousel", data-slide-to=i)
+                                else
+                                    li(data-target="#galleryCarousel", data-slide-to=i)
+                                - i++
+                        div.carousel-inner(role="listbox")
+                            - var i = 0
+                            while i < numberOfGalleryPhotos
+                                if i == 0
+                                    div.active.item
+                                        img.img-responsive(src=galleryPhotos[i])
+                                else
+                                    div.item
+                                        img.img-responsive(src=galleryPhotos[i])
+                                - i++
+                        a.left.carousel-control(href="#galleryCarousel", role="button", data-slide="prev")
+                            span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                            span.sr-only= "Previous"
+                        a.right.carousel-control(href="#galleryCarousel", role="button", data-slide="next")
+                            span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                            span.sr-only= "Next"
