@@ -14,5 +14,7 @@ router.get('/groom', renderTemplate('groom'));
 router.get('/bridalParty', renderTemplate('bridalParty'));
 router.get('/groomsmen', renderTemplate('groomsmen'));
 router.get('/location', renderTemplate('location'));
+router.get('/registrations', renderTemplate('registrations'));
+router.get('/gallery', renderTemplate('gallery'));
 
 module.exports = router;
