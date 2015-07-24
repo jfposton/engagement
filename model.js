@@ -24,7 +24,7 @@ function common() {
 }
 
 var location = function() {
-    var commonData = setImagePath("images/main3-v1.jpg");
+    var commonData = setImagePath("images/location.jpg");
     var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
         "javascripts/map.js"
@@ -56,14 +56,15 @@ function gallery()
 }
 
 var pages = {
-    story: function() {return setImagePath("images/main-v1.png")},
+    story: function() {return setImagePath("images/ourstory.png")},
     bride: function() {return setImagePath("images/bride.jpg")},
     groom: function() {return setImagePath("images/groom.png")},
-    bridalParty: function() {return setImagePath("images/main4.JPG")},
-    groomsmen: function() {return setImagePath("images/main3.JPG")},
+    bridalParty: function() {return setImagePath("images/bridesmaids.JPG")},
+    groomsmen: function() {return setImagePath("images/groomsmen.jpg")},
     error: common,
     location: location,
-    gallery: gallery
+    gallery: gallery,
+    registrations: common,
 }
 
 module.exports = function (page) {
