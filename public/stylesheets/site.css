@@ -127,3 +127,11 @@ body {
 .nav-pills {
     padding: 2em;
 }
+#galleryModal .modal-header {
+    padding-top: 10px;
+    height: 40px;
+}
+
+#galleryModal .close > span {
+    font-size: 1.2em;
+}
