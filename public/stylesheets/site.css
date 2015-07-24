@@ -64,18 +64,18 @@ body {
     background-color: #d9edf7;
 }
 
-.carousel-indicators li {
+#quote-carousel> .carousel-indicators li {
     background-color: lightgray;
 }
 
-.carousel-indicators  .active {
+#quote-carousel > .carousel-indicators  .active {
     border: 1px solid lightgray;
 }
-.carousel-control.left, .carousel-control.right {
+#quote-carousel > .carousel-control.left, #quote-carousel > .carousel-control.right {
     background: initial;
 }
 
-.carousel-indicators {
+#quote-carousel > .carousel-indicators {
     bottom: -1em;
 }
 
