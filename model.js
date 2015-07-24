@@ -1,5 +1,4 @@
 var fs = require('fs');
-var junk = require('junk');
 var readChunk = require('read-chunk');
 var imageType = require('image-type');
 
