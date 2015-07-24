@@ -45,5 +45,8 @@ function adjustContentsTop()
     $('body').scrollTop(0);
 }
 
-$(window).load(adjustContentsTop);
+$(window).load(function() {
+    adjustContentsTop();
+    $('.grid').masonry();
+});
 $(window).resize(adjustContentsTop);
