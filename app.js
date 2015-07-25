@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 if(app.get('env') === 'development') {
-    app.use(logger('dev'))
+    app.use(logger('dev'));
 } else {
     app.use(logger('combined'));
 }

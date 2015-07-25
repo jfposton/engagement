@@ -20,10 +20,10 @@ function common() {
             "vendor/masonry/dist/masonry.pkgd.js",
             "javascripts/site.js",
         ]
-    }
+    };
 }
 
-var location = function() {
+function location() {
     var commonData = setImagePath("images/location.jpg");
     var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
@@ -56,17 +56,17 @@ function gallery()
 }
 
 var pages = {
-    story: function() {return setImagePath("images/ourstory.png")},
-    bride: function() {return setImagePath("images/bride.jpg")},
-    groom: function() {return setImagePath("images/groom.png")},
-    bridalParty: function() {return setImagePath("images/bridesmaids.JPG")},
-    groomsmen: function() {return setImagePath("images/groomsmen.jpg")},
+    story: function() {return setImagePath("images/ourstory.png");},
+    bride: function() {return setImagePath("images/bride.jpg");},
+    groom: function() {return setImagePath("images/groom.png");},
+    bridalParty: function() {return setImagePath("images/bridesmaids.JPG");},
+    groomsmen: function() {return setImagePath("images/groomsmen.jpg");},
     error: common,
     location: location,
     gallery: gallery,
     registrations: common,
-}
+};
 
 module.exports = function (page) {
     return pages[page]();
-}
+};

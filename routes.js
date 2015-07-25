@@ -5,7 +5,7 @@ var router = express.Router();
 function renderTemplate(template) {
     return function(req, res, next) {
         res.render(template, model(template));
-    }
+    };
 }
 
 router.get(/^\/(story)?$/, renderTemplate('story'));
