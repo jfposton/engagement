@@ -3,7 +3,7 @@ var model = require('./model');
 var router = express.Router();
 
 function renderTemplate(template) {
-    return function(req, res, next) {
+    return function(req, res) {
         res.render(template, model(template));
     };
 }

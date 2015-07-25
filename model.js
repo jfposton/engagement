@@ -29,7 +29,7 @@ function location() {
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
         "javascripts/map.js"
     ];
-    requiredScripts.forEach(function(currentValue, index, array) {
+    requiredScripts.forEach(function(currentValue) {
         commonData.scripts.push(currentValue);
     });
     return commonData;
@@ -46,7 +46,7 @@ function gallery()
 {
     var commonData = common();
     commonData.galleryPhotos = [];
-    fs.readdirSync('public/images/gallery').forEach(function(currentItem, index, array) {
+    fs.readdirSync('public/images/gallery').forEach(function(currentItem) {
         var buffer = readChunk.sync('public/images/gallery/' + currentItem, 0, 12);
         if (imageType(buffer) !== null) {
             commonData.galleryPhotos.push('images/gallery/' + currentItem);

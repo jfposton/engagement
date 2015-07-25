@@ -39,7 +39,7 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-app.use(function(error, request, response, next) {
+app.use(function(error, request, response) {
     response.status(error.status || 500);
     data = model('error');
     data.message = error.message;
