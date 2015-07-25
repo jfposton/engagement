@@ -2,4 +2,6 @@
 
 ## What is this?
 
-Simply the source for a website that I made to commemorate and provide details for my wedding.
+A web application that I created for my engagement/wedding.
+
+Utilizes express.js as the web server, Jade templates, and the styling is based on Bootstrap 3.
