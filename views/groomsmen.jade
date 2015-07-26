@@ -1,0 +1,33 @@
+mixin imagePanel(image)
+    div.thumbnail
+        img.bridal-party(src=image)
+        div.caption
+            block
+            
+extends common/showcase
+block title
+    | Groomsmen
+block text
+    div.page-header
+        h1#groomsmen.text-center
+            | Groomsmen
+    div.row
+        div.col-xs-12.col-md-4.col-md-offset-4
+            +imagePanel("images/groomsmen/jon.jpg")
+                h3
+                    | Jon Poston
+                    small
+                        | Best Man
+    div.row
+        div.col-xs-12.col-md-3
+            +imagePanel("images/groomsmen/thomas.jpg")
+                h4= "Thomas Poston"
+        div.col-xs-12.col-md-3
+            +imagePanel("images/groomsmen/tyler.jpg")
+                h4= "Tyler Camden"
+        div.col-xs-12.col-md-3
+            +imagePanel("images/groomsmen/brandon.jpg")
+                h4= "Brandon Dozier"
+        div.col-xs-12.col-md-3
+            +imagePanel("images/groomsmen/bradley.jpg")
+                h4= "Bradley Cook"

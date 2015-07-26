@@ -2,11 +2,6 @@
 
 ## What is this?
 
-Simply the source for a website that I made to commemorate and provide details for my wedding.
+A web application that I created for my engagement/wedding.
 
-## What technologies does it use?
-
-- Standard Web Technologies (HTML, CSS, JS)
-- [Grunt](http://gruntjs.com)
-- [Bootstrap 3.0](http://getbootstrap.com/)
-- [stellar.js](https://github.com/markdalgleish/stellar.js)
+Utilizes express.js as the web server, Jade templates, and the styling is based on Bootstrap 3.

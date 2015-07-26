@@ -1,0 +1,10 @@
+#/bin/bash
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) 
+if [ "$1" == "" ]; then
+    echo "Please provide an environment"
+    exit 1
+fi
+export NODE_ENV=$1
+command -v forever >/dev/null 2>&1 || npm install -g forever
+
+forever -a -m 10 -l /var/log/forever/forever.log -o /var/log/forever/outfile.log -e /var/log/forever/errfile.log --workingDir $DIR start $DIR/bin/www
