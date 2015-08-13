@@ -15,13 +15,13 @@ block content
                 | Want to see photos of the wedding? 
             p 
                 | Be sure to use 
-                a(href="https://tagboard.com/toasttoposton/search")= "#ToastToPoston"
+                a(href="https://tagboard.com/toasttoposton/search", target="_blank")= "#ToastToPoston"
                 |  on your
-                a(href="https://instagram.com/explore/tags/toasttoposton/")=" Instagram"
+                a(href="https://instagram.com/explore/tags/toasttoposton/", target="_blank")=" Instagram"
                 | ,
-                a(href="https://twitter.com/hashtag/toasttoposton")= " Twitter"
+                a(href="https://twitter.com/hashtag/toasttoposton", target="_blank")= " Twitter"
                 | , and
-                a(href="https://www.facebook.com/hashtag/toasttoposton")=" Facebook!"
+                a(href="https://www.facebook.com/hashtag/toasttoposton", target="_blank")=" Facebook!"
         div.row.grid
             each value, index in galleryPhotos
                 +thumbnail(value, index)
