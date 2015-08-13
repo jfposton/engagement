@@ -70,7 +70,7 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: curl https://gist.githubusercontent.com/isaacs/579814/raw/24f5f02b5cd1812ebb1c41a33a13a0417cccbd69/yet-another-option.sh | sh
+    - location: /usr/bin/curl https://gist.githubusercontent.com/isaacs/579814/raw/24f5f02b5cd1812ebb1c41a33a13a0417cccbd69/yet-another-option.sh | sh
       timeout:
       runas: root
     - location: npm install -g bower
