@@ -6,11 +6,23 @@ node_js:
 - iojs
 - iojs-v1.0.4
 deploy:
-  provider: openshift
-  user: jfposton@gmail.com
-  password:
-    secure: zMn21m2CM31hM0VkmexEPHvb6efBWecC4WOgJkOju6Eyf6GXUPk5HjqVJbC/0p+l6m02lIE7pdnVojSbY2+fJU9OSAyS9DMQS+afHtAw6pGIzRJmhur358HC75vozKLML2xMh24Jj7QfP8C2YaVb97YZ0xs/7iQzu0fem5+tEbHHKdBSx9c6NmbavUoN9OIhhFag1LZTPNvaSn5puQ7jiFWGW96RuC6KqioC8y5rNdZVY6a2i4GQ6EbYo4oW5F3z0JETuc5dsoygZ9Yj+XIGOGWBPF4yMpAqr5XeDcapd2M6M2xVz3PFTxhhDWecZIG7uw16d1K/qRlF+glw66m+dq+F5lWvZhonhCfqgp2VmJ+NZ72MkiuuUph4NdT6YNXQdDdoqnsrL/Omzoo+oFRfPp5JgHkQ+ae96a44j9bKmlCghVt/KxKaVhCLo9MOO9eg4Hx+QIgB+3fPdj5iNthBAU0fWRV3yxSbYWe/Q9k7Up6H5rqhE73fCCBfiNL/fmp8l8I5cCDJIcCHtdt1SyhGymsu3v7ly7oqf66Auf+YP4LsGxEAUjS+i9CPLblxhwLg/oYzQN7lkTmluXaI8mYaZh3QxJd3fNJnSQHBjMqFVJqZ/OoCWtAXdyoKDQKmswsaIwjuxVwPvGQSgUbVp/Wlxtl86hyhmRzWrR0yEWcvf2I=
-  app: toasttoposton
-  domain: poston
+- provider: s3
+  access_key_id: AKIAIVAGOGHIH6TAETYQ
+  secret_access_key:
+    secure: unKyK1gdql7QwiiK7OyKCc9WgVYqKXsHwjv9GaBT/dFVFHhKEp4F5CsdzPOX7bQ7gR44VWUPb08oyav8IKzGywrqv5l2EGS8A4CcTYceTs4vIVUSmav7utOPrNG/JCZwvChrJWmVbt+sBgEKqEqM+JCPNbR1Ir1HYgUUn8HRzXiVA3+4i2+sc7Rd2svN3UpW6suKAo3GVF/W4Rpy/36OuSlPggIhSHUfycmmXVmu/67JtKA55MR3dF6OX2JaxLvXsCsbA4p3V3siNTT7uj9HRczrcRl5FyYC15/hJWgB+nY3uUSL8QYRrUkpDD7hW31BTlJ6Z/10x6+Bzf5wb7dkymsivD2KHzRLlnKN9jR/bWgfKhr7Yf066OR1sWHhKwqUP/evn94HBSY1XmYq4Wxy1P7iu6mdPwnDbSEeAJNVjSClJ7wfip7rcTp+Dt+HJDFr1SB1DLiCVCps3JTG6gAXWHA/4dyO7ejfR6DFVHSDPDEqIJoYZHaENckK8M0hOeUDRjiyZGOSG0DURyWNwGb1Z+qcayDMP1J8aZkdXKGZZMDGb0YbuF6ZzmdSdxGdXfAGkWTxSTFkQb93PPS7L8s/Q4TtTFxPQHHeSZFMpe47O5r3zAZYzLS17XibPk7ipwdUuNtKxXWJwmVi+I9tK45ak7HD0opAE5e8WOvgMQ5z9uk=
+  bucket: toasttopostonimages
+  local-dir: public/images
+  upload-dir: images
+  acl: public_read
   on:
     repo: jfposton/engagement
+    node: '0.10'
+- provider: 'openshift'
+  user: 'jfposton@gmail.com'
+  password:
+    secure: 'zMn21m2CM31hM0VkmexEPHvb6efBWecC4WOgJkOju6Eyf6GXUPk5HjqVJbC/0p+l6m02lIE7pdnVojSbY2+fJU9OSAyS9DMQS+afHtAw6pGIzRJmhur358HC75vozKLML2xMh24Jj7QfP8C2YaVb97YZ0xs/7iQzu0fem5+tEbHHKdBSx9c6NmbavUoN9OIhhFag1LZTPNvaSn5puQ7jiFWGW96RuC6KqioC8y5rNdZVY6a2i4GQ6EbYo4oW5F3z0JETuc5dsoygZ9Yj+XIGOGWBPF4yMpAqr5XeDcapd2M6M2xVz3PFTxhhDWecZIG7uw16d1K/qRlF+glw66m+dq+F5lWvZhonhCfqgp2VmJ+NZ72MkiuuUph4NdT6YNXQdDdoqnsrL/Omzoo+oFRfPp5JgHkQ+ae96a44j9bKmlCghVt/KxKaVhCLo9MOO9eg4Hx+QIgB+3fPdj5iNthBAU0fWRV3yxSbYWe/Q9k7Up6H5rqhE73fCCBfiNL/fmp8l8I5cCDJIcCHtdt1SyhGymsu3v7ly7oqf66Auf+YP4LsGxEAUjS+i9CPLblxhwLg/oYzQN7lkTmluXaI8mYaZh3QxJd3fNJnSQHBjMqFVJqZ/OoCWtAXdyoKDQKmswsaIwjuxVwPvGQSgUbVp/Wlxtl86hyhmRzWrR0yEWcvf2I='
+  app: 'toasttoposton'
+  domain: 'poston'
+  on:
+    repo: 'jfposton/engagement'
+    node: '0.10'
