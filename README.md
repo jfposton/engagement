@@ -1,3 +1,4 @@
+![Build Status](https://travis-ci.org/jfposton/engagement.svg?branch=master)
 # Toast to Poston
 
 ## What is this?
