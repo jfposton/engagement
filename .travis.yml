@@ -10,7 +10,7 @@ deploy:
   user: jfposton@gmail.com
   password:
     secure: zMn21m2CM31hM0VkmexEPHvb6efBWecC4WOgJkOju6Eyf6GXUPk5HjqVJbC/0p+l6m02lIE7pdnVojSbY2+fJU9OSAyS9DMQS+afHtAw6pGIzRJmhur358HC75vozKLML2xMh24Jj7QfP8C2YaVb97YZ0xs/7iQzu0fem5+tEbHHKdBSx9c6NmbavUoN9OIhhFag1LZTPNvaSn5puQ7jiFWGW96RuC6KqioC8y5rNdZVY6a2i4GQ6EbYo4oW5F3z0JETuc5dsoygZ9Yj+XIGOGWBPF4yMpAqr5XeDcapd2M6M2xVz3PFTxhhDWecZIG7uw16d1K/qRlF+glw66m+dq+F5lWvZhonhCfqgp2VmJ+NZ72MkiuuUph4NdT6YNXQdDdoqnsrL/Omzoo+oFRfPp5JgHkQ+ae96a44j9bKmlCghVt/KxKaVhCLo9MOO9eg4Hx+QIgB+3fPdj5iNthBAU0fWRV3yxSbYWe/Q9k7Up6H5rqhE73fCCBfiNL/fmp8l8I5cCDJIcCHtdt1SyhGymsu3v7ly7oqf66Auf+YP4LsGxEAUjS+i9CPLblxhwLg/oYzQN7lkTmluXaI8mYaZh3QxJd3fNJnSQHBjMqFVJqZ/OoCWtAXdyoKDQKmswsaIwjuxVwPvGQSgUbVp/Wlxtl86hyhmRzWrR0yEWcvf2I=
-  app: engagement
+  app: toasttoposton
   domain: poston
   on:
     repo: jfposton/engagement
