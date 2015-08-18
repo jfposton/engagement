@@ -1,7 +1,15 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "0.11"
-  - "0.10"
-  - "iojs"
-  - "iojs-v1.0.4"
+- '0.12'
+- '0.11'
+- '0.10'
+- iojs
+- iojs-v1.0.4
+after_success:
+- chmod 600 openshift.key
+- ssh-add openshift.key
+- git remote add openshift ssh://55d27c4e7628e1da9c0000e3@engagement-poston.rhcloud.com/~/git/engagement.git/
+- git push openshift
+before_install:
+- openssl aes-256-cbc -K $encrypted_4b6f344cacd7_key -iv $encrypted_4b6f344cacd7_iv
+  -in openshift.key.enc -out .travis/openshift.key -d
