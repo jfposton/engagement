@@ -50,3 +50,13 @@ $(window).load(function() {
     $('.grid').masonry();
 });
 $(window).resize(adjustContentsTop);
+
+$('#galleryModal').on('show.bs.modal', function (event) {
+    var thumbnail = $(event.relatedTarget);
+    var imageIndex = thumbnail.data('index');
+
+    var modal = $(this);
+
+    modal.find('.active').removeClass('.active');
+    modal.find('ol.carousel-indicators > li')[imageIndex].click();
+});
