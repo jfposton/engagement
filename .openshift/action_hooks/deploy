@@ -1,5 +1,5 @@
 #!/bin/bash
-
-command -v bower >/dev/null 2>&1 || { sudo npm install -g bower; }
-
-bower update
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+cd $DIR/../../
+./node_modules/bower/bin/bower update
+cd -
