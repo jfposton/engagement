@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var model = require('./model');
-
+var compression = require('compression')
 var routes = require('./routes');
 
 var app = express();
@@ -24,6 +24,7 @@ if(app.get('env') === 'development') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
