@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "test": "./test.sh",
-    "start": "./bin/www"
+    "start": "./bin/www",
+    "postinstall": "./node_modules/bower/bin/bower update"
   },
   "repository": "https://github.com/jfposton/engagement",
   "dependencies": {
