@@ -12,4 +12,4 @@ after_success:
 - git push openshift
 before_install:
 - openssl aes-256-cbc -K $encrypted_4b6f344cacd7_key -iv $encrypted_4b6f344cacd7_iv
-  -in openshift.key.enc -out .travis/openshift.key -d
+  -in openshift.key.enc -out openshift.key -d
