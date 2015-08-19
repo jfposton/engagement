@@ -16,7 +16,7 @@ describe("Model", function() {
     process.env.NODE_ENV = 'production';
     expect(process.env.NODE_ENV).toBe('production');
     var errorModel = model('error');
-          expect(errorModel.imageBasePath).toBe('https://s3.amazonaws.com/toasttopostonimages/');
+          expect(errorModel.imageBasePath).toBe('https://raw.githubusercontent.com/jfposton/engagement/master/public/');
 
   });
 
