@@ -3,6 +3,10 @@ var readChunk = require('read-chunk');
 var imageType = require('image-type');
 
 function common() {
+    var imageBasePath = "";
+    if (process.env.NODE_ENV === 'production') {
+        imageBasePath = "https://s3.amazonaws.com/toasttopostonimages/";
+    }
     return {
         head: {
             title: "Toast to Poston",
@@ -19,7 +23,8 @@ function common() {
             "vendor/headroom.js/dist/headroom.min.js",
             "vendor/masonry/dist/masonry.pkgd.js",
             "javascripts/site.js",
-        ]
+        ],
+        imageBasePath: imageBasePath
     };
 }
 
@@ -38,7 +43,7 @@ function location() {
 function setImagePath(imagePath)
 {
     var commonData = common();
-    commonData.imagePath = imagePath;
+    commonData.showcaseImagePath = imageBasePath + imagePath;
     return commonData;
 }
 
@@ -49,7 +54,7 @@ function gallery()
     fs.readdirSync('public/images/gallery').forEach(function(currentItem) {
         var buffer = readChunk.sync('public/images/gallery/' + currentItem, 0, 12);
         if (imageType(buffer) !== null) {
-            commonData.galleryPhotos.push('images/gallery/' + currentItem);
+            commonData.galleryPhotos.push(imageBasePath + 'images/gallery/' + currentItem);
         }
     });
     return commonData;

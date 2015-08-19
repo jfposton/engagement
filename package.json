@@ -17,6 +17,7 @@
     "express": "^4.13.1",
     "image-type": "^2.0.2",
     "jade": "~1.11.0",
+    "jasmine": "^2.3.2",
     "jshint": "^2.8.0",
     "morgan": "~1.6.1",
     "read-chunk": "^1.0.1",
