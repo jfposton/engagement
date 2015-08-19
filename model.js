@@ -1,12 +1,12 @@
 var fs = require('fs');
 var readChunk = require('read-chunk');
 var imageType = require('image-type');
-var imageBasePath = "";
-if (process.env.NODE_ENV == 'production') {
-    imageBasePath = "https://s3.amazonaws.com/toasttopostonimages/";
-}
 
 function common() {
+    var imageBasePath = "";
+    if (process.env.NODE_ENV === 'production') {
+        imageBasePath = "https://s3.amazonaws.com/toasttopostonimages/";
+    }
     return {
         head: {
             title: "Toast to Poston",
