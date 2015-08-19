@@ -137,3 +137,24 @@ body {
 #galleryModal .close > span {
     font-size: 1.2em;
 }
+
+#cover {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .85;
+    z-index: 1000;
+}
+
+#cover > img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

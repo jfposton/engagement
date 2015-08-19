@@ -48,6 +48,7 @@ function adjustContentsTop()
 $(window).load(function() {
     adjustContentsTop();
     $('.grid').masonry();
+    $('#cover').hide();
 });
 $(window).resize(adjustContentsTop);
 
