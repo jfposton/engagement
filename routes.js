@@ -1,20 +1,14 @@
 var express = require('express');
-var model = require('./model');
+var common = require('./lib/commonFunctions');
 var router = express.Router();
 
-function renderTemplate(template) {
-    return function(req, res) {
-        res.render(template, model(template));
-    };
-}
-
-router.get(/^\/(story)?$/, renderTemplate('story'));
-router.get('/bride', renderTemplate('bride'));
-router.get('/groom', renderTemplate('groom'));
-router.get('/bridalParty', renderTemplate('bridalParty'));
-router.get('/groomsmen', renderTemplate('groomsmen'));
-router.get('/location', renderTemplate('location'));
-router.get('/registrations', renderTemplate('registrations'));
-router.get('/gallery', renderTemplate('gallery'));
+router.get(/^\/(story)?$/, common.renderTemplate('story'));
+router.get('/bride', common.renderTemplate('bride'));
+router.get('/groom', common.renderTemplate('groom'));
+router.get('/bridalParty', common.renderTemplate('bridalParty'));
+router.get('/groomsmen', common.renderTemplate('groomsmen'));
+router.get('/location', common.renderTemplate('location'));
+router.get('/registrations', common.renderTemplate('registrations'));
+router.get('/gallery', common.renderTemplate('gallery'));
 
 module.exports = router;
