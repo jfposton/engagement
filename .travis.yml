@@ -6,17 +6,6 @@ node_js:
 - iojs
 - iojs-v1.0.4
 deploy:
-- provider: s3
-  access_key_id: AKIAIVAGOGHIH6TAETYQ
-  secret_access_key:
-    secure: unKyK1gdql7QwiiK7OyKCc9WgVYqKXsHwjv9GaBT/dFVFHhKEp4F5CsdzPOX7bQ7gR44VWUPb08oyav8IKzGywrqv5l2EGS8A4CcTYceTs4vIVUSmav7utOPrNG/JCZwvChrJWmVbt+sBgEKqEqM+JCPNbR1Ir1HYgUUn8HRzXiVA3+4i2+sc7Rd2svN3UpW6suKAo3GVF/W4Rpy/36OuSlPggIhSHUfycmmXVmu/67JtKA55MR3dF6OX2JaxLvXsCsbA4p3V3siNTT7uj9HRczrcRl5FyYC15/hJWgB+nY3uUSL8QYRrUkpDD7hW31BTlJ6Z/10x6+Bzf5wb7dkymsivD2KHzRLlnKN9jR/bWgfKhr7Yf066OR1sWHhKwqUP/evn94HBSY1XmYq4Wxy1P7iu6mdPwnDbSEeAJNVjSClJ7wfip7rcTp+Dt+HJDFr1SB1DLiCVCps3JTG6gAXWHA/4dyO7ejfR6DFVHSDPDEqIJoYZHaENckK8M0hOeUDRjiyZGOSG0DURyWNwGb1Z+qcayDMP1J8aZkdXKGZZMDGb0YbuF6ZzmdSdxGdXfAGkWTxSTFkQb93PPS7L8s/Q4TtTFxPQHHeSZFMpe47O5r3zAZYzLS17XibPk7ipwdUuNtKxXWJwmVi+I9tK45ak7HD0opAE5e8WOvgMQ5z9uk=
-  bucket: toasttopostonimages
-  local-dir: public/images
-  upload-dir: images
-  acl: public_read
-  on:
-    repo: jfposton/engagement
-    node: '0.10'
 - provider: 'openshift'
   user: 'jfposton@gmail.com'
   password:

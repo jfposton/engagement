@@ -4,7 +4,7 @@ var imageType = require('image-type');
 function imageBasePath() {
     var path = "";
     if (process.env.NODE_ENV === 'production') {
-        path = "https://s3.amazonaws.com/toasttopostonimages/";
+        path = "https://raw.githubusercontent.com/jfposton/engagement/master/public/";
     }
     return path;
 }
