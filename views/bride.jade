@@ -2,8 +2,18 @@ extends common/showcase
 block title
     | Bride
 block text
-    div#bride
-        h1.text-center The Bride
-    div.page-header
-        h3 Taylor Dozier
-    p Bio
+    div.row
+        div.col-xs-12.col-md-12
+            div.page-header
+                h1#bride.text-center
+                    | Taylor Dozier
+                    span.small= " The Bride"
+    div.row
+        div.col-xs-12.col-md-6
+            div.panel.panel-default
+                div.panel-heading
+                    h3.panel-title
+                        | Songs That Remind Me of Jonathan
+                div.panel-body
+                    ul.list-group
+                        +songListItemList(songs)
