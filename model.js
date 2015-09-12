@@ -32,7 +32,7 @@ function common() {
     };
 }
 
-function location() {
+function weddingInfo() {
     var commonData = setImagePath("images/location.jpg");
     var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
@@ -71,9 +71,8 @@ var pages = {
     bridalParty: function() {return setImagePath("images/bridesmaids.JPG");},
     groomsmen: function() {return setImagePath("images/groomsmen.jpg");},
     error: common,
-    location: location,
+    weddinginfo: weddingInfo,
     gallery: gallery,
-    registrations: common,
 };
 
 module.exports = function (page) {
