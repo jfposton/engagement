@@ -38,7 +38,8 @@ function adjustContentsTop()
     var windowHeight = $(window).height();
     var heightDifference = showcaseHeight - windowHeight;
     if (heightDifference >= -5) { // If showcase is taller than the window. -5 to allow some room for error
-        $('#contents > .container').css({top: windowHeight * .9 + "px"});
+        $('#contents > .container').css({top: windowHeight * .95 + "px"});
+        $('img.showcase').css('margin-top', '5em');
     } else {
         $('#contents > .container').css({top: showcaseHeight + "px"});
     }
