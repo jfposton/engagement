@@ -41,6 +41,9 @@ function weddingInfo() {
     requiredScripts.forEach(function(currentValue) {
         commonData.scripts.push(currentValue);
     });
+
+    // expecting { 'image': "<path to image>", 'registration': "<path to registration>"}
+    commonData.registrations = [];
     return commonData;
 }
 
