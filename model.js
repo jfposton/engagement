@@ -104,7 +104,7 @@ var pages = {
                 "video": "https://youtube.com/embed/ePA275T57PE"
             }
         ];
-        return data
+        return data;
     },
     groom: function() {
         var data = setImagePath("images/groom.png");
@@ -134,7 +134,7 @@ var pages = {
                 "video": "https://www.youtube.com/embed/kMAzstG5O7E"
             }
         ];
-        return data
+        return data;
     },
     bridalParty: function() {return setImagePath("images/bridesmaids.JPG");},
     groomsmen: function() {return setImagePath("images/groomsmen.jpg");},
