@@ -1,12 +1,3 @@
-mixin songListItem(title, url)
-    li.list-group-item.song-list-item
-        h6= title
-            span.glyphicon.glyphicon-chevron-right
-        div.song-list-video.hidden.text-center(data-src=url)
-            hr
-            div.song-list-video-placeholder
-                img(height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif")
-
 mixin caroselIndicators(target, quantity)
     ol.carousel-indicators
         li.active(data-target=target, data-slide-to=0)
@@ -54,12 +45,8 @@ block text
                         | Songs That Remind Me of Taylor
                 div.panel-body
                     ul.list-group
-                        +songListItem("Summer Song By Wavorly", "https://www.youtube.com/embed/qqAFf5LAsV0")
-                        +songListItem("Best Thing By Relient K", "https://www.youtube.com/embed/KhR-2phsGdA")
-                        +songListItem("Every Little Thing By Hawk Nelson", "https://www.youtube.com/embed/Sb9Ch8g3hfY")
-                        +songListItem("Perfect Chemistry By Nevertheless", "https://www.youtube.com/embed/PUCgmhc2A5g")
-                        +songListItem("I'm Taking You with Me By Relient K", "https://www.youtube.com/embed/CvG5TLd8yGc")
-                        +songListItem("Bright By Echosmith", "https://www.youtube.com/embed/kMAzstG5O7E")
+                        +songListItemList(songs)
+
         div.col-xs-12.col-md-6
             div.panel.panel-default
                 div.panel-heading

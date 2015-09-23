@@ -1,3 +1,15 @@
+mixin songListItemList(songs)
+    each song in songs
+        +songListItem(song.title, song.video)
+mixin songListItem(title, url)
+    li.list-group-item.song-list-item
+        h6= title
+            span.glyphicon.glyphicon-chevron-right
+        div.song-list-video.hidden.text-center(data-src=url)
+            hr
+            div.song-list-video-placeholder
+                img(height="50em" width="50em" src="http://www.zanteweddings.com/images/loading-heart.gif.pagespeed.ce.lmt6ndyxso.gif")
+
 doctype html
 html
   head
