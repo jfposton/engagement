@@ -1,3 +1,8 @@
+var semver = require("semver");
+if (!semver.satisfies(process.version, '^1.6.0')) {
+    console.log("Can't execute zombie tests due to node version requirements");
+    return;
+}
 var Browser = require("zombie");
 var port = process.env.NODE_ENV === 'production' ? '8080' : '3000';
 var base_url = "http://localhost:" + port;
