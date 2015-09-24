@@ -34,4 +34,5 @@ gulp.task('compile-jade', function () {
     compile('bridalParty');
     compile('groomsmen');
     compile('weddinginfo');
+    compile('gallery');
 });

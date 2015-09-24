@@ -6,6 +6,10 @@ RET=$?
 if [ "$RET" != "0" ]; then
     exit 1
 fi
+
+echo -n "Starting server in the background..."
+timeout 2m $(which npm) start > /dev/null 2>&1 &
+echo "done"
 echo "Running jasmine"
 jasmine
 RET=$?
@@ -17,10 +21,4 @@ which timeout
 RET=$?
 if [ "$RET" != "0" ]; then
     exit 0
-fi
-
-timeout 10s $(which npm) start
-RET=$?
-if [ "$RET" != "124" ]; then
-    exit 1
 fi
