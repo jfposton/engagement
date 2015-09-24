@@ -4,14 +4,14 @@
  * Module dependencies.
  */
 var app = require('../app');
-console.log("Starting engagement app in " + app.settings.env + "environment!");
+console.log("Starting engagement app in " + app.settings.env + " environment!");
 var debug = require('debug')('engagement:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
-var defaultPort = app.settings.env == 'production' ? '8080' : '3000';
+var defaultPort = app.settings.env === 'production' ? '8080' : '3000';
 var port = normalizePort(process.env.OPENSHIFT_NODEJS_PORT || defaultPort);
 app.set('port', port);
 
