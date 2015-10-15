@@ -5,6 +5,7 @@
   "scripts": {
     "test": "./test.sh",
     "start": "./bin/www",
+    "preinstall": "[ \"$TRAVIS_BRANCH\" == 'master' ] && export NODE_ENV='production' || true",
     "postinstall": "HOME=$OPENSHIFT_REPO_DIR ./node_modules/gulp/bin/gulp.js postinstall"
   },
   "repository": "https://github.com/jfposton/engagement",
