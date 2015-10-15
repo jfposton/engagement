@@ -28,6 +28,9 @@ gulp.task('bower', function() {
 
 gulp.task('compile-jade', function () {
     "use strict";
+    if (process.env.TRAVIS == 'true' && process.env.TRAVIS_BRANCH == 'master') {
+        process.env.NODE_ENV = 'production';
+    }
     compile('story');
     compile('bride');
     compile('groom');
