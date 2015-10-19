@@ -28,9 +28,9 @@ gulp.task('bower', function() {
 
 gulp.task('compile-jade', function () {
     "use strict";
-    if (process.env.TRAVIS === 'true' && process.env.TRAVIS_BRANCH === 'master') {
-        process.env.NODE_ENV = 'production';
-    }
+    // Compiled templates should always be ready for production
+    var originalEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = 'production';
     compile('story');
     compile('bride');
     compile('groom');
@@ -38,4 +38,5 @@ gulp.task('compile-jade', function () {
     compile('groomsmen');
     compile('weddinginfo');
     compile('gallery');
+    process.env.NODE_ENV = originalEnv;
 });
