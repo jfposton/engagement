@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/jfposton/engagement.svg?branch=master)
+[![Build Status](https://travis-ci.org/jfposton/engagement.svg?branch=master)](https://travis-ci.org/jfposton/engagement)
 # Toast to Poston
 
 ## What is this?
