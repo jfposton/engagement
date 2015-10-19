@@ -1,5 +1,5 @@
 mixin thumbnail(src, index)
-    div.col-xs-6.col-md-4.grid-item
+    div.col-xs-6.col-md-4.grid-item.clickable
         a.thumbnail(data-toggle="modal", data-target="div.modal", data-index=index)
                 img.image(src=src)
 
@@ -11,9 +11,9 @@ block content
         div.page-header
             h1= "Photo Gallery"
         div.alert.alert-success(role="alert")
-            h3
+            h2
                 | Want to see photos of the wedding? 
-            p 
+            h4
                 | Be sure to use 
                 a(href="https://tagboard.com/toasttoposton/search", target="_blank")= "#ToastToPoston"
                 |  on your
