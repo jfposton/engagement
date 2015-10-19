@@ -1,16 +1,20 @@
 extends common/showcase
 mixin storyRow(url, picLeft)
     div.row
-        div.col-md-6
+        div.col-md-1
+            | &nbsp;
+        div.col-md-5
             if picLeft
                 img.thumbnail(src=url, width="100%")
             else
                 block
-        div.col-md-6
+        div.col-md-5
             if picLeft
                 block
             else
                 img.thumbnail(src=url, width="100%")
+        div.col-md-1
+            | &nbsp;
 
 block title
     | Our Story
