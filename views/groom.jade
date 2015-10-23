@@ -1,16 +1,3 @@
-mixin caroselIndicators(target, quantity)
-    ol.carousel-indicators
-        li.active(data-target=target, data-slide-to=0)
-        - var n = 1
-        while n < quantity
-            li(data-target=target data-slide-to=n++)
-
-mixin quote
-    div.item(class!=attributes.class)
-        p.text-center.lead
-            block
-
-
 extends common/showcase
 block title
     | Groom
