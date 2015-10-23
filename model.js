@@ -18,6 +18,7 @@ function common() {
                 "vendor/bootstrap/dist/css/bootstrap.min.css",
                 "vendor/animate.css/animate.min.css",
                 "stylesheets/site.css",
+                "stylesheets/photos.css"
             ]
         },
         scripts: [
