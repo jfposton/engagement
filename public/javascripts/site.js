@@ -53,6 +53,7 @@ $(window).load(function() {
     adjustContentsTop();
     $('.grid').masonry();
     $('#cover').hide();
+    $('#taylor-quotes.carousel').height($('#taylor-quotes.carousel').find('div.carousel-inner').height() + 50 + "px");
 });
 $(window).resize(adjustContentsTop);
 
@@ -65,3 +66,7 @@ $('#galleryModal').on('show.bs.modal', function (event) {
     modal.find('.active').removeClass('.active');
     modal.find('ol.carousel-indicators > li')[imageIndex].click();
 });
+
+$('#taylor-quotes.carousel').on('slid.bs.carousel', function () {
+    $(this).height($(this).find('div.carousel-inner').height() + 50 + "px");
+})

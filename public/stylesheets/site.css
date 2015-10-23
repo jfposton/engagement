@@ -15,7 +15,7 @@
 }
 
 .page-header {
-    border-bottom: 1px #CCC solid
+    border-bottom: 1px #BBB solid
 }
 
 #location-map {
@@ -37,7 +37,6 @@
 }
 
 #quote-carousel {
-    height: 15.5em;
     padding-top: 1em;
 }
 
@@ -56,14 +55,14 @@
     background-color: #d9edf7;
 }
 
-#quote-carousel> .carousel-indicators li {
+.carousel-indicators li {
     background-color: lightgray;
 }
 
-#quote-carousel > .carousel-indicators  .active {
+.carousel-indicators  .active {
     border: 1px solid lightgray;
 }
-#quote-carousel > .carousel-control.left, #quote-carousel > .carousel-control.right {
+.carousel-control.left, #quote-carousel > .carousel-control.right {
     background: initial;
 }
 
