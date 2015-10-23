@@ -18,6 +18,7 @@ function common() {
                 "vendor/bootstrap/dist/css/bootstrap.min.css",
                 "vendor/animate.css/animate.min.css",
                 "stylesheets/site.css",
+                "stylesheets/photos.css"
             ]
         },
         scripts: [
@@ -33,7 +34,7 @@ function common() {
 }
 
 function weddingInfo() {
-    var commonData = setImagePath("images/location.jpg");
+    var commonData = setImagePath("images/weddinginformation.jpg");
     var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
         "javascripts/map.js"
@@ -68,7 +69,7 @@ function gallery()
 }
 
 var pages = {
-    story: function() {return setImagePath("images/ourstory.png");},
+    story: function() {return setImagePath("images/ourstory.jpg");},
     bride: function() {
 
         var data = setImagePath("images/bride.jpg");
