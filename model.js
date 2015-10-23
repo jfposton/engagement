@@ -69,7 +69,7 @@ function gallery()
 }
 
 var pages = {
-    story: function() {return setImagePath("images/ourstory.png");},
+    story: function() {return setImagePath("images/ourstory.jpg");},
     bride: function() {
 
         var data = setImagePath("images/bride.jpg");
