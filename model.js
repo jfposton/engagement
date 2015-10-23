@@ -34,7 +34,7 @@ function common() {
 }
 
 function weddingInfo() {
-    var commonData = setImagePath("images/location.jpg");
+    var commonData = setImagePath("images/weddinginformation.jpg");
     var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
         "javascripts/map.js"
