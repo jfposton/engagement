@@ -806,7 +806,7 @@ describe("the website wedding information page", function () {
                 next();
             });
         });
-    }, 10000);
+    }, 100000);
     it("should have valid story photo gallery navigation link", function (next) {
         var browser = new Browser();
         browser.visit(url, function() {
