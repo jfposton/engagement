@@ -1,3 +1,5 @@
+var showcaseMarginTop = $('img.showcase').css('margin-top');
+
 function initHeadroom() {
     var headroom = new Headroom(document.querySelector(".navbar"), {
         "offset": 50,
@@ -37,11 +39,12 @@ function adjustContentsTop()
     var showcaseHeight = $('img.showcase').outerHeight();
     var windowHeight = $(window).height();
     var heightDifference = showcaseHeight - windowHeight;
-    if (heightDifference >= -5) { // If showcase is taller than the window. -5 to allow some room for error
-        $('#contents > .container').css({top: windowHeight * .95 + "px"});
-        $('img.showcase').css('margin-top', '5em');
+    if (heightDifference >= -5) { // If showcase is taller than the window with -5 to allow some room for error
+        $('#contents > .container').css({top: windowHeight * .975 + "px"});
+        $('img.showcase').css('margin-top', '2.5em');
     } else {
         $('#contents > .container').css({top: showcaseHeight + "px"});
+        $('img.showcase').css('margin-top', showcaseMarginTop);
     }
     $('body').scrollTop(0);
 }
@@ -50,6 +53,7 @@ $(window).load(function() {
     adjustContentsTop();
     $('.grid').masonry();
     $('#cover').hide();
+    $('#taylor-quotes.carousel').height($('#taylor-quotes.carousel').find('div.carousel-inner').height() + 50 + "px");
 });
 $(window).resize(adjustContentsTop);
 
@@ -62,3 +66,7 @@ $('#galleryModal').on('show.bs.modal', function (event) {
     modal.find('.active').removeClass('.active');
     modal.find('ol.carousel-indicators > li')[imageIndex].click();
 });
+
+$('#taylor-quotes.carousel').on('slid.bs.carousel', function () {
+    $(this).height($(this).find('div.carousel-inner').height() + 50 + "px");
+})
