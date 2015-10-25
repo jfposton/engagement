@@ -58,7 +58,7 @@ router.post('/songsuggestions', function (req, res) {
             }
         }).then(function(song) {
             var actualSong = song[0];
-            if(actualSong.count == null) {
+            if(actualSong.count === null) {
                 actualSong.count = 0;
             }
             actualSong.count++;
