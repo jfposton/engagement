@@ -4,8 +4,14 @@ mixin registration(imageLocation, registrationLocation)
             a(href=registrationLocation)
                 img(src=imageLocation)
 
-mixin instapanel(title, type)
-    div.row#location-wrapper
+mixin map(title, type)
+        div.col-xs-12.col-md-12.col-lg-12.col-xl-12
+            div.panel(class="panel-#{type}")
+                div.panel-heading
+                    h3.panel-title #{title}
+                div.panel-body
+                    block
+mixin genericpanel(title, type)
         div.col-xs-12.col-md-12.col-lg-12.col-xl-12
             div.panel(class="panel-#{type}")
                 div.panel-heading
@@ -23,7 +29,7 @@ block text
                 | Wedding Information
 
     div.row#location-wrapper
-    +instapanel("Location & Lodging", "primary")
+    +map("Location & Lodging", "primary")
         div.row
             div.col-xs-12.col-md-12.col-lg-12.col-xl-12
                 div.alert.alert-info.show
@@ -55,15 +61,41 @@ block text
                                 a.map-link(data-loc="fairfieldInn")
                                     | Fairfield Inn
             div.col-xs-12.col-md-10.pull-right#location-map
-    if registrations.length > 0
-        +instapanel("Registrations", "primary")
-            div.row
-                each registration in registrations
-                    +registration(registration.image, registration.registration)
-    else
-        +instapanel("Registrations", "warning")
-            h2.text-center
-                | Information coming soon!
-    +instapanel("Song Selection", "success")
-        iframe.col-xs-12.text-center.embed-responsive-item(src="https://docs.google.com/forms/d/1D3ZATh5pfHt3bbUfuRUR36Y1hjxvFcllcm6zkLH4jD0/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0" scrolling="no")= "Loading..."
-    include common/footer.jade
+    div.row
+        if registrations.length > 0
+            +genericpanel("Registrations", "primary")
+                    each registration in registrations
+                        +registration(registration.image, registration.registration)
+        else
+            +genericpanel("Registrations", "warning")
+                h2.text-center
+                    | Information coming soon!
+        +genericpanel("Song Selection", "success")
+            div#song-selection
+                h4 We need your help!
+                p
+                    | Coming up with a song list is hard! So help us out by telling us some of your favorite songs.
+                    | You can see how your song is doing down below!
+                    br
+                    br
+                    | Note that submitting your suggestion here does not mean that your song will be played. That's why its a suggestion :)
+                    br
+                form.form-inline(onSubmit="return addNewSuggestion()")
+                    div.form-group
+                        label(for="exampleInputName2")
+                            | Song Title
+                        input.form-control#song-title(required="required" type="text" placeholder="Bad Blood")
+                    div.form-group
+                        label(for="exampleInputEmail2")
+                            | Song Artist
+                        input.form-control#song-artist(required="required" type="text" placeholder="Taylor Swift")
+                    button.btn.btn-primary(type="submit")
+                        | Submit Suggestion
+                hr
+                table.table.table-condensed.table-striped
+                    thead
+                        tr
+                            th Song Title
+                            th Song Artist
+                            th Suggestion Count
+                    tbody
