@@ -1,5 +1,66 @@
 var showcaseMarginTop = $('img.showcase').css('margin-top');
 
+function updateTable(tbody, items) {
+    if(items.length <= 0) {
+        overwriteTable("<h3 class='table-override text-center'>No responses yet :( Be the first!</h3>")
+        return;
+    }
+    showTable();
+    tbody.empty();
+    items.forEach(function(item) {
+        tbody.append("<tr><td>" + item.title + "</td><td>" + item.artist + "</td><td>" + item.count + "</td></tr>");
+    });
+}
+
+function overwriteTable(content) {
+    $('#song-selection table').hide();
+    $('#song-selection').append(content);
+}
+
+function showTable() {
+    $('#song-selection .table-override').hide();
+    $('#song-selection table').show();
+}
+
+function loadSongSelectionData() {
+    $.ajax({
+        method: "GET",
+        url: '/songsuggestions',
+        success: function (data, textStatus, jqXHR) {
+            var tbody = $('#song-selection tbody');
+            updateTable(tbody, data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            overwriteTable("<h5>Unable to load song suggestions</h5>");
+        }
+    });
+    return false;
+}
+
+function addNewSuggestion() {
+    var form = $('#song-selection form');
+    var title = form.find('#song-title').val();
+    var artist = form.find('#song-artist').val();
+
+    $.ajax({
+        method: "POST",
+        url: "/songsuggestions",
+        data: {
+            title: title,
+            artist: artist
+        },
+        success: function(data, textStatus) {
+            loadSongSelectionData();
+            $("#song-selection form").replaceWith("<h5 class='alert alert-success alert-dismissable' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button> Thanks for the suggestion!</h5>");
+
+        },
+        error: function(data, textStatus, errorThrown) {
+            $("#song-selection table").before("<h5 class='alert alert-warning alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" + data.responseJSON.reason + "</h5>");
+        }
+    });
+    return false;
+}
+
 function initHeadroom() {
     var headroom = new Headroom(document.querySelector(".navbar"), {
         "offset": 50,
@@ -54,6 +115,7 @@ $(window).load(function() {
     $('.grid').masonry();
     $('#cover').hide();
     $('#taylor-quotes.carousel').height($('#taylor-quotes.carousel').find('div.carousel-inner').height() + 50 + "px");
+    loadSongSelectionData();
 });
 $(window).resize(adjustContentsTop);
 
@@ -69,4 +131,4 @@ $('#galleryModal').on('show.bs.modal', function (event) {
 
 $('#taylor-quotes.carousel').on('slid.bs.carousel', function () {
     $(this).height($(this).find('div.carousel-inner').height() + 50 + "px");
-})
+});
