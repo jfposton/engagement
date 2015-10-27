@@ -45,7 +45,21 @@ block text
                 div.panel-body
                     ul.list-group
                         +songListItemList(songs)
+
         div.col-xs-12.col-md-6
+            div.panel.panel-warning
+                div.panel-heading
+                    h3.panel-title
+                        | My Favorite Thing About Jonathan
+                div.panel-body
+                    p
+                        | Jonathan is willing to do pretty much anything to make me smile. Even though he is a very
+                        | reserved person by nature, he is willing to take me to Disney World and make a scene in
+                        | front of hundreds of people, take me to every fall themed event under the sun, dress up
+                        | like Mickey Mouse for Halloween, wear a turkey hat on Thanksgiving, drive to Greenville
+                        | just to spend a few hours with me, and suffer endless amounts of pictures- just to make
+                        | me happy. Everyday, he finds a way to make me fall more in love with him in the most simple
+                        | ways, and that’s why I can’t wait to spend my life with him!
             div.panel.panel-success
                 div.panel-heading
                     h3.panel-title
@@ -55,15 +69,6 @@ block text
                         +caroselIndicators("#taylor-quotes", 9)
                         div.carousel-inner#quote-carousel(role="listbox")
                             +quote(class="active")
-                                | It's amazing what I let my heart go through
-                                br
-                                | To get me where it got me
-                                br
-                                | In this moment here with you
-                                br
-                                | - "Here" by Rascal Flatts
-
-                            +quote()
                                 | I wouldn't change a thing
                                 br
                                 | I'd walk right back through the rain
@@ -83,6 +88,13 @@ block text
                                 | - "Here" by Rascal Flatts
 
                             +quote()
+                                | No matter where life takes us
+                                br
+                                | You always have my heart my dear
+                                br
+                                | - “Young Hearts” by Search the City
+
+                            +quote()
                                 | This much I know is true
                                 br
                                 | That God blessed the broken road
@@ -90,16 +102,6 @@ block text
                                 | That led me straight to you
                                 br
                                 | - “Bless the Broken Road” by Rascal Flatts
-
-                            +quote()
-                                | Home is wherever I'm with you
-
-                            +quote()
-                                | No matter where life takes us
-                                br
-                                | You always have my heart my dear
-                                br
-                                | - “Young Hearts” by Search the City
 
                             +quote()
                                 | Whatever our souls are made of, his and mine are the same.
@@ -119,6 +121,15 @@ block text
                                 | choosing you.
 
                             +quote()
+                                | It's amazing what I let my heart go through
+                                br
+                                | To get me where it got me
+                                br
+                                | In this moment here with you
+                                br
+                                | - "Here" by Rascal Flatts
+
+                            +quote()
                                 | How lucky am I to have something that makes saying
                                 br
                                 | goodbye so hard.
@@ -133,4 +144,5 @@ block text
                             span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
                             span.sr-only
                                 | Next
+
     include common/footer.jade
