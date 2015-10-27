@@ -15,19 +15,22 @@ function assertPageHeaderText(selector, expectedtext, browser)
     expect(header).toNotBe(null);
     expect(header._childNodes[0]._data).toBe(expectedtext);
 }
-
+function getBrowser() {
+    return new Browser({
+        runScripts: false
+    });
+}
 describe("the website index page", function () {
     var url = base_url;
-
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -40,7 +43,7 @@ describe("the website index page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -50,7 +53,7 @@ describe("the website index page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -63,7 +66,7 @@ describe("the website index page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -77,7 +80,7 @@ describe("the website index page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -91,7 +94,7 @@ describe("the website index page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -104,7 +107,7 @@ describe("the website index page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -117,7 +120,7 @@ describe("the website index page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Our Story');
@@ -136,14 +139,14 @@ describe("the website story page", function () {
     var url = base_url + '/story';
     var initialTitle = 'Our Story';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -156,7 +159,7 @@ describe("the website story page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -166,7 +169,7 @@ describe("the website story page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -179,7 +182,7 @@ describe("the website story page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -193,7 +196,7 @@ describe("the website story page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -207,7 +210,7 @@ describe("the website story page", function () {
     });
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -220,7 +223,7 @@ describe("the website story page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -233,7 +236,7 @@ describe("the website story page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -251,14 +254,14 @@ describe("the website bride page", function () {
     var url = base_url + '/bride';
     var initialTitle = 'Bride';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -271,7 +274,7 @@ describe("the website bride page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -281,7 +284,7 @@ describe("the website bride page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -294,7 +297,7 @@ describe("the website bride page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -308,7 +311,7 @@ describe("the website bride page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -322,7 +325,7 @@ describe("the website bride page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', 'Bride');
@@ -335,7 +338,7 @@ describe("the website bride page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -348,7 +351,7 @@ describe("the website bride page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -366,14 +369,14 @@ describe("the website groom page", function () {
     var url = base_url + '/groom';
     var initialTitle = 'Groom';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -386,7 +389,7 @@ describe("the website groom page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -396,7 +399,7 @@ describe("the website groom page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -409,7 +412,7 @@ describe("the website groom page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -423,7 +426,7 @@ describe("the website groom page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -437,7 +440,7 @@ describe("the website groom page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -450,7 +453,7 @@ describe("the website groom page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -463,7 +466,7 @@ describe("the website groom page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -481,14 +484,14 @@ describe("the website bridal party page", function () {
     var url = base_url + '/bridalParty';
     var initialTitle = 'Bridal Party';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -501,7 +504,7 @@ describe("the website bridal party page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -511,7 +514,7 @@ describe("the website bridal party page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -524,7 +527,7 @@ describe("the website bridal party page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -538,7 +541,7 @@ describe("the website bridal party page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -552,7 +555,7 @@ describe("the website bridal party page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -565,7 +568,7 @@ describe("the website bridal party page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -578,7 +581,7 @@ describe("the website bridal party page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -596,14 +599,14 @@ describe("the website groomsmen page", function () {
     var url = base_url + '/groomsmen';
     var initialTitle = 'Groomsmen';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -616,7 +619,7 @@ describe("the website groomsmen page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -626,7 +629,7 @@ describe("the website groomsmen page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -639,7 +642,7 @@ describe("the website groomsmen page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -653,7 +656,7 @@ describe("the website groomsmen page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -667,7 +670,7 @@ describe("the website groomsmen page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -680,7 +683,7 @@ describe("the website groomsmen page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -693,7 +696,7 @@ describe("the website groomsmen page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -711,14 +714,14 @@ describe("the website wedding information page", function () {
     var url = base_url + '/weddinginfo';
     var initialTitle = 'Wedding Information';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -731,7 +734,7 @@ describe("the website wedding information page", function () {
     }, 100000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -741,7 +744,7 @@ describe("the website wedding information page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -754,7 +757,7 @@ describe("the website wedding information page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -768,7 +771,7 @@ describe("the website wedding information page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -782,7 +785,7 @@ describe("the website wedding information page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -795,7 +798,7 @@ describe("the website wedding information page", function () {
         });
     }, 10000);
     it("should have valid story wedding information navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -808,7 +811,7 @@ describe("the website wedding information page", function () {
         });
     }, 100000);
     it("should have valid story photo gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -826,14 +829,14 @@ describe("the website photo gallery page", function () {
     var url = base_url + '/gallery';
     var initialTitle = 'Photo Gallery';
     it("should have defined headless browser", function(next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         expect(typeof browser !== undefined).toBe(true);
         expect(browser instanceof Browser).toBe(true);
         next();
     });
 
     it("should have valid story gallery navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -846,7 +849,7 @@ describe("the website photo gallery page", function () {
     }, 10000);
 
     it("should visit the site and see the index page", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -856,7 +859,7 @@ describe("the website photo gallery page", function () {
     }, 10000);
 
     it("should have valid story page navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -869,7 +872,7 @@ describe("the website photo gallery page", function () {
         });
     }, 10000);
     it("should have valid story bride navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -883,7 +886,7 @@ describe("the website photo gallery page", function () {
     }, 10000);
 
     it("should have valid story groom navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -897,7 +900,7 @@ describe("the website photo gallery page", function () {
     }, 10000);
 
     it("should have valid story bridal party navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -910,7 +913,7 @@ describe("the website photo gallery page", function () {
         });
     }, 10000);
     it("should have valid story groomsmen navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);
@@ -923,7 +926,7 @@ describe("the website photo gallery page", function () {
         });
     }, 10000);
     it("should have valid story weddingInfo navigation link", function (next) {
-        var browser = new Browser();
+        var browser = getBrowser();
         browser.visit(url, function() {
             expect(browser.success).toBe(true);
             browser.assert.text('title', initialTitle);

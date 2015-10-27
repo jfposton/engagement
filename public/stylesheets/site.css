@@ -156,3 +156,8 @@
     font-family: 'Brush Script MT';
     font-size: 4em;
 }
+
+#song-selection label, #song-selection button {
+    margin-left: .5em;
+    margin-right: .5em;
+}

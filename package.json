@@ -28,7 +28,9 @@
     "morgan": "~1.6.1",
     "read-chunk": "^1.0.1",
     "semver": "^5.0.3",
+    "sequelize": "^3.12.2",
     "serve-favicon": "~2.3.0",
+    "sqlite3": "^3.1.0",
     "zombie": "^4.1.0"
   }
 }
