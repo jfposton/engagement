@@ -38,5 +38,6 @@ gulp.task('compile-jade', function () {
     compile('groomsmen');
     compile('weddinginfo');
     compile('gallery');
+    compile('credits');
     process.env.NODE_ENV = originalEnv;
 });

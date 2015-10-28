@@ -39,6 +39,26 @@ if (google == undefined) {
             },
             "window": null,
             "marker": null
+        },
+        "hamptoninn": {
+            "location": getLLObj(36.2943617,-76.2459372),
+            "markerData": {
+                position: getLLObj(36.2943617,-76.2459372),
+                title: "Hampton Inn"
+            },
+            "infoWindowData": {
+                content: "<h5><a href='http://hamptoninn3.hilton.com/en/hotels/north-carolina/hampton-inn-elizabeth-city-ECGNCHX/index.html'>Hampton Inn</a></h5><p>402 Halstead Blvd, Elizabeth City, NC 27909</p>"
+            }
+        },
+        "bestwestern": {
+            "location": getLLObj(36.2904081,-76.2421385),
+            "markerData": {
+                position: getLLObj(36.2904081,-76.2421385),
+                title: "Best Western"
+            },
+            "infoWindowData": {
+                content: "<h5><a href='http://book.bestwestern.com/bestwestern/US/NC/Elizabeth-City-hotels/BEST-WESTERN-PLUS-Elizabeth-City-Inn---Suites/Hotel-Overview.do?propertyCode=34178'>Best Western</a></h5><p>848 Halstead Blvd, Elizabeth City, NC 27909</p>"
+            }
         }
     }
 

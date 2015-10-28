@@ -111,7 +111,7 @@ var pages = {
         return data;
     },
     groom: function() {
-        var data = setImagePath("images/groom.png");
+        var data = setImagePath("images/groom.jpg");
         data.songs = [
             {
                 "title": "Summer Song By Wavorly",
