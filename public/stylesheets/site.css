@@ -161,3 +161,12 @@
     margin-left: .5em;
     margin-right: .5em;
 }
+
+#credits-header {
+    margin-top: 4em;
+}
+
+#credits {
+    background-color: white;
+    border-radius: 5px;
+}
