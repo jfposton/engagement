@@ -1,6 +1,6 @@
 mixin imagePanel(image)
     div.thumbnail
-        img.bridal-party(src=image)
+        img.bridal-party(src=image, height="500px")
         div.caption
             block
 
@@ -17,11 +17,11 @@ block text
                 h3
                     | Jon Poston
                     small
-                        | Best Man
+                        |  Best Man
                 p
                     | Jon is none other than my Dad. He's always been there for me and in so many ways really is my
                     | best man. We've had more than our fair share of great days. From misadventures at the top of
-                    | Yosimite Falls to seeing State beat Carolina for the fifth year in a row I'm glad I was blessed
+                    | Yosemite Falls to seeing State beat Carolina for the fifth year in a row, I'm glad I was blessed
                     | with him as a father. And now I get to have him by my side as I start the biggest adventure of
                     | my life!
 
@@ -30,7 +30,7 @@ block text
             +imagePanel("images/groomsmen/thomas.jpg")
                 h4= "Thomas Poston"
                 p
-                    | Thomas is my brother. He's outgoing, smart, and tells you what he thinks. He's always had my back
+                    | Thomas is my younger brother. He's outgoing, smart, and tells you what he thinks. He's always had my back
                     | when I needed it. I'm glad to call him my brother. As the rest of our lives begin I can't wait
                     | for all the shenanigans that will surely follow!
 
@@ -38,22 +38,36 @@ block text
             +imagePanel("images/groomsmen/tyler.jpg")
                 h4= "Tyler Camden"
                 p
-                    | Tyler and I met at church in high school. We eventually became friends and after 2 years at NC State
-                    | together we really bonded. I'm glad to call Tyler a friend and look forward to sharing this special
-                    | day with him!
+                    | Tyler and I met at church in high school. We became close
+                    | friends and bonded during our first two years at NC State and
+                    | through working together at Caswell. He is always there for
+                    | Taylor and I and is always willing to lend a hand. He's been
+                    | been a really big help a few times when Taylor needed some
+                    | help with her car! I’m glad to call Tyler a friend and look
+                    | forward to sharing this special day with him!
+
         div.col-xs-12.col-md-3
             +imagePanel("images/groomsmen/brandon.jpg")
                 h4= "Brandon Dozier"
                 p
-                    | Brandon is Taylor's brother. He really is a fun guy to hang out with. I've really enjoyed getting to
-                    | know him over these past couple years. Hopefully we'll have many more Christmas mornings to experience
-                    | together.
+                    | Brandon is Taylor's older brother and they are very (weirdly)
+                    | close. He’s athletic and funny and a really fun guy to hang
+                    | out with. I've enjoyed getting to know him over these past
+                    | couple years. I look forward to getting to know him even
+                    | better and having many more fun times as our families spend
+                    | more and more time together.
 
         div.col-xs-12.col-md-3
             +imagePanel("images/groomsmen/bradley.jpg")
                 h4= "Bradley Cook"
                 p
-                    | Bradley and I have known each other since birth, largely because our parents are such close
-                    | friends. When my family and I moved away from Wake Forest we naturaly ended up going somewhat separate
-                    | ways, but every time our family's get back together its always a great time catching up!
+                    | Bradley and I’s parents have been friends for a really long
+                    | time and because of that, Bradley and I have been friends
+                    | since birth. When I lived in Wake Forest, he was my first
+                    | friend and we spent tons of time together. Once I moved to
+                    | Currituck, we didn’t get to see each other as much, but every
+                    | time our families are back together, we always have a great
+                    | time catching up. It only seems right to have my first friend
+                    | stand behind me on this special day.
+
     include common/footer.jade
