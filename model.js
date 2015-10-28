@@ -145,7 +145,7 @@ var pages = {
     error: common,
     weddinginfo: weddingInfo,
     gallery: gallery,
-    credits: function() {return common()},
+    credits: function() {return common();},
 };
 
 module.exports = function (page) {
