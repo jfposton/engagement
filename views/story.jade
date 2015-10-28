@@ -1,18 +1,18 @@
 extends common/showcase
-mixin storyRow(url, picLeft)
+mixin storyRow(url, width, height, picLeft)
     div.row
         div.col-md-1
             | &nbsp;
         div.col-md-5
             if picLeft
-                img.thumbnail(src=url, width="95%" height="400px")
+                img.center-block.thumbnail(src=url, width=width height=height)
             else
                 block
         div.col-md-5
             if picLeft
                 block
             else
-                img.thumbnail(src=url, width="100%")
+                img.center-block.thumbnail(src=url, width="100%")
         div.col-md-1
             | &nbsp;
 
@@ -22,7 +22,7 @@ block text
     div#story.page-header
         h1.text-center= "Our Story"
 
-        +storyRow("images/OurStory/thebeginning.jpg", "left")
+        +storyRow("images/OurStory/thebeginning.jpg", "85%", "400px", "left")
             h3
                 | The Beginning
             p
@@ -39,7 +39,7 @@ block text
                 | They dated for several months until marching band ended for the season and they "drifted apart". Although
                 | they broke up, they still remained the best of friends over the next several years of high school and college.
 
-        +storyRow("images/OurStory/thelovestory.jpg")
+        +storyRow("images/OurStory/thelovestory.jpg", "100%")
             h3
                 | The Love Story
             p
@@ -53,7 +53,7 @@ block text
                 | returned to school and came home two weeks later to go on their first real date. He asked Taylor to be his
                 | girlfriend that night, January 19, 2013. From then on, they were attached at the hip and fell more in love
                 | every day.
-        +storyRow("images/OurStory/theproposal.jpg", "left")
+        +storyRow("images/OurStory/theproposal.jpg", "100%", "", "left")
             h3
                 | The Forever
             p
