@@ -1,0 +1,27 @@
+extends common/layout.jade
+block title
+    | Credits
+block content
+    div.page-header
+        h1#credits-header.text-center
+            | Credit
+    div.container#credits
+        table.table.table-striped
+            thead
+                tr
+                    th Contribution
+                    th Contributor(s)
+            tbody
+                tr 
+                    td Pictures
+                    td 
+                        | Taylor Dozier and 
+                        a(href="https://www.facebook.com/missylovesjerry/?pnref=lhc")
+                            | Missy loves Jerry Wedding Photography
+                tr
+                    td General Development
+                    td Jonathan Poston
+                tr
+                    td Other Contents
+                    td Taylor Dozier and Jonathan Poston
+    include common/footer.jade

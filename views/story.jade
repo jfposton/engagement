@@ -5,7 +5,7 @@ mixin storyRow(url, picLeft)
             | &nbsp;
         div.col-md-5
             if picLeft
-                img.thumbnail(src=url, width="100%")
+                img.thumbnail(src=url, width="95%" height="400px")
             else
                 block
         div.col-md-5
@@ -19,8 +19,8 @@ mixin storyRow(url, picLeft)
 block title
     | Our Story
 block text
-    div#story
-        h1.text-center.page-header= "Our Story"
+    div#story.page-header
+        h1.text-center= "Our Story"
 
         +storyRow("images/OurStory/thebeginning.jpg", "left")
             h3
@@ -67,3 +67,4 @@ block text
                 | then turned to Taylor and told her that in the happiest place on Earth, he would like her to make him the
                 | happiest man on Earth. He got down on one knee and asked Taylor to be his wife and presented her with the
                 | most beautiful ring she'd ever seen. She cried, and of course she said yes, and the rest is history!
+    include common/footer.jade
