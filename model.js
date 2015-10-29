@@ -111,7 +111,6 @@ var pages = {
             }
         ];
         data.bridephotos = gatherPhotos('images/bridephotos/');
-        console.log(data);
         return data;
     },
     groom: function() {
