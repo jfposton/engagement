@@ -69,7 +69,7 @@ block text
                         | Quotes That Remind Me of Taylor
                 div.panel-body
                     div#taylor-quotes.carousel.slide(data-ride="carousel" data-interval="false")
-                        +caroselIndicators("#taylor-quotes", 3)
+                        +caroselIndicators("#taylor-quotes", 4)
                         div.carousel-inner#quote-carousel(role="listbox")
                             +quote(class="active")
                                 | And the day that I finally can take you home
@@ -109,6 +109,14 @@ block text
                                 br
                                 | But I'll try to be the one who's by her side
                                 br
+                            +quote
+                                | Something happens when I hold her
+                                br
+                                | She keeps my heart from getting older
+                                br
+                                | When the days get short and the nights get a little bit colder
+                                br
+                                | We hold each other
                         a.left.carousel-control(href="#taylor-quotes",role="button",data-slide="prev")
                             span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
                             span.sr-only
