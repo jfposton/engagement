@@ -62,9 +62,6 @@
 .carousel-indicators  .active {
     border: 1px solid lightgray;
 }
-.carousel-control.left, #quote-carousel > .carousel-control.right {
-    background: initial;
-}
 
 #quote-carousel > .carousel-indicators {
     bottom: -1em;

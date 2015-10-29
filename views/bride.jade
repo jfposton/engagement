@@ -41,7 +41,8 @@ block text
             div.panel.panel-danger
                 div.panel-body
                     div#photos.carousel.slide(data-ride="carousel")
-                        +caroselIndicators("#photos", 6)
+                        - var numIndicators = bridephotos.length
+                        +caroselIndicators("#photos", numIndicators)
                         div.carousel-inner(role="listbox")
                             - var active = true
                             each photo in bridephotos
