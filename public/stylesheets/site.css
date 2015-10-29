@@ -173,3 +173,7 @@
 footer {
     margin-top: 1em;
 }
+
+img.center-block.photos-photo {
+    max-height: 300px;
+}

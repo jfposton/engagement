@@ -26,15 +26,6 @@ block text
                         | be able to call myself an NCSU Alumni and be associated with this great university.
     div.row
         div.col-xs-12.col-md-6
-            div.panel.panel-warning
-                div.panel-heading
-                    h3.panel-title
-                        | Songs That Remind Me of Taylor
-                div.panel-body
-                    ul.list-group
-                        +songListItemList(songs)
-
-        div.col-xs-12.col-md-6
             div.panel.panel-success
                 div.panel-heading
                     h3.panel-title
@@ -43,6 +34,35 @@ block text
                     p
                         | My favorite moment with Taylor is a really hard question. Of course our trip to Disney World was a really good time.
                         | But honestly anytime when we are together and I get to make her laugh and smile is the new best day. I know it's cheesy but its the truth.
+            div.panel.panel-warning
+                    div.panel-heading
+                        h3.panel-title
+                            | Songs That Remind Me of Taylor
+                    div.panel-body
+                        ul.list-group
+                            +songListItemList(songs)
+
+        div.col-xs-12.col-md-6
+            div.panel.panel-danger
+                div.panel-body
+                    div#photos.carousel.slide(data-ride="carousel")
+                        +caroselIndicators("#photos", 6)
+                        div.carousel-inner(role="listbox")
+                            - var active = true
+                            each photo in bridephotos
+                                if active
+                                    +photo(photo)(class="active")
+                                    - active = false
+                                else
+                                    +photo(photo)
+                        a.left.carousel-control(href="#photos" role="button" data-slide="prev")
+                            span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                            span.sr-only
+                                | Previous
+                        a.right.carousel-control(href="#photos" role="button" data-slide="next")
+                            span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                            span.sr-only
+                                | Next
             div.panel.panel-info
                 div.panel-heading
                     h3.panel-title

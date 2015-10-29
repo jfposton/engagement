@@ -10,6 +10,11 @@ mixin quote()
         p.text-center.lead
             block
 
+mixin photo(path)
+    div.item(class!=attributes.class)
+        img.center-block.photos-photo(src=path)
+
+
 extends layout
 
 block content

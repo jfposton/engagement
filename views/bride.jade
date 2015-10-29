@@ -31,20 +31,41 @@ block text
                         | lived in my whole life! My entire family lives in
                         | Currituck too! I am both nervous and excited to branch out
                         | and explore a new home with my love- Raleigh, NC!
-                    h5= "What I Do?"
+                    h5= "What I Do"
                     p
                         | I am a teacher in the making! I will graduate in December
                         | with an Elementary Education degree and hope to find a
                         | job teaching 2nd-3rd grade starting next fall!
     div.row
         div.col-xs-12.col-md-6
+            div.panel.panel-danger
+                div.panel-body
+                    div#photos.carousel.slide(data-ride="carousel")
+                        +caroselIndicators("#photos", 6)
+                        div.carousel-inner(role="listbox")
+                            - var active = true
+                            each photo in bridephotos
+                                if active
+                                    +photo(photo)(class="active")
+                                    - active = false
+                                else
+                                    +photo(photo)
+                        a.left.carousel-control(href="#photos" role="button" data-slide="prev")
+                            span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                            span.sr-only
+                                | Previous
+                        a.right.carousel-control(href="#photos" role="button" data-slide="next")
+                            span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                            span.sr-only
+                                | Next
             div.panel.panel-info
                 div.panel-heading
                     h3.panel-title
-                        | Songs That Remind Me of Jonathan
+                        | Songs That Remind Me of us
                 div.panel-body
                     ul.list-group
                         +songListItemList(songs)
+
 
         div.col-xs-12.col-md-6
             div.panel.panel-warning
@@ -66,7 +87,7 @@ block text
                         | Quotes That Remind Me of Jonathan
                 div.panel-body
                     div#taylor-quotes.carousel.slide(data-ride="carousel" data-interval="false")
-                        +caroselIndicators("#taylor-quotes", 9)
+                        +caroselIndicators("#taylor-quotes", 8)
                         div.carousel-inner#quote-carousel(role="listbox")
                             +quote(class="active")
                                 | I wouldn't change a thing

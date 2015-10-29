@@ -1,6 +1,18 @@
 var fs = require('fs');
 var readChunk = require('read-chunk');
 var imageType = require('image-type');
+
+function gatherPhotos(sourcePath) {
+    var result = [];
+    fs.readdirSync('public/' + sourcePath).forEach(function(currentItem) {
+        var buffer = readChunk.sync('public/' + sourcePath + currentItem, 0, 12);
+        if (imageType(buffer) !== null) {
+            result.push(imageBasePath() + sourcePath + currentItem);
+        }
+    });
+    return result;
+}
+
 function imageBasePath() {
     var path = "";
     if (process.env.NODE_ENV === 'production') {
@@ -58,13 +70,7 @@ function setImagePath(imagePath)
 function gallery()
 {
     var commonData = common();
-    commonData.galleryPhotos = [];
-    fs.readdirSync('public/images/gallery').forEach(function(currentItem) {
-        var buffer = readChunk.sync('public/images/gallery/' + currentItem, 0, 12);
-        if (imageType(buffer) !== null) {
-            commonData.galleryPhotos.push(imageBasePath() + 'images/gallery/' + currentItem);
-        }
-    });
+    commonData.galleryPhotos = gatherPhotos('images/gallery/');
     return commonData;
 }
 
@@ -96,10 +102,6 @@ var pages = {
                 "video": "https://youtube.com/embed/DHEOF_rcND8"
             },
             {
-                "title": "Lucky by Jason Mraz",
-                "video": "https://youtube.com/embed/JNA15rXSxOI"
-            },
-            {
                 "title": "Thinking Out Loud by Ed Sheeran",
                 "video": "https://youtube.com/embed/lp-EO5I60KA"
             },
@@ -108,6 +110,8 @@ var pages = {
                 "video": "https://youtube.com/embed/ePA275T57PE"
             }
         ];
+        data.bridephotos = gatherPhotos('images/bridephotos/');
+        console.log(data);
         return data;
     },
     groom: function() {
@@ -138,6 +142,7 @@ var pages = {
                 "video": "https://www.youtube.com/embed/kMAzstG5O7E"
             }
         ];
+        data.bridephotos = gatherPhotos('images/groomphotos/');
         return data;
     },
     bridalParty: function() {return setImagePath("images/bridesmaids.JPG");},
