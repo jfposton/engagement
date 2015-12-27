@@ -8,7 +8,7 @@ function updateTable(tbody, items) {
     showTable();
     tbody.empty();
     items.forEach(function(item) {
-        tbody.append("<tr><td>" + item.title + "</td><td>" + item.artist + "</td><td>" + item.count + "</td></tr>");
+        tbody.append("<tr><td><i class='btn btn-default glyphicon glyphicon-heart clickable' onclick='sendNewSuggestionRequest(\"" + item.title + "\",\"" + item.artist + "\")'></i>&nbsp;" + item.title + "</td><td>" + item.artist + "</td><td>" + item.count + "</td></tr>");
     });
 }
 
@@ -41,7 +41,11 @@ function addNewSuggestion() {
     var form = $('#song-selection form');
     var title = form.find('#song-title').val();
     var artist = form.find('#song-artist').val();
+    sendNewSuggestionRequest(title, artist)
+    return false;
+}
 
+function sendNewSuggestionRequest(title, artist) {
     $.ajax({
         method: "POST",
         url: "/songsuggestions",
@@ -58,7 +62,6 @@ function addNewSuggestion() {
             $("#song-selection table").before("<h5 class='alert alert-warning alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" + data.responseJSON.reason + "</h5>");
         }
     });
-    return false;
 }
 
 function initHeadroom() {
