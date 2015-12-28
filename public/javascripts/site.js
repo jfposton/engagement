@@ -118,7 +118,9 @@ $(window).load(function() {
     $('.grid').masonry();
     $('#cover').hide();
     $('#taylor-quotes.carousel').height($('#taylor-quotes.carousel').find('div.carousel-inner').height() + 50 + "px");
-    loadSongSelectionData();
+    if (window.location.pathname.indexOf('weddinginfo') > -1) {
+        loadSongSelectionData();
+    }
 });
 $(window).resize(adjustContentsTop);
 
