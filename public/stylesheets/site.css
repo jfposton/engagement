@@ -48,7 +48,7 @@
 
     /* No support for these yet, use at own risk */
     -o-user-select: none;
-    user-select: none;  
+    user-select: none;
 }
 
 .song-list-item:hover {
@@ -173,4 +173,8 @@ footer {
 
 img.center-block.photos-photo {
     max-height: 300px;
+}
+
+.col-md-offset-half {
+    margin-left: 4.166666665%;
 }
