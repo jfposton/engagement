@@ -32,3 +32,5 @@ npm-debug.log
 .idea
 public/*.html
 *.sqlite
+*.min.js
+*.min.css

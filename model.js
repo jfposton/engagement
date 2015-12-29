@@ -2,6 +2,9 @@ var fs = require('fs');
 var readChunk = require('read-chunk');
 var imageType = require('image-type');
 
+function isProduction() {
+    return process.env.NODE_ENV === 'production';
+}
 function gatherPhotos(sourcePath) {
     var result = [];
     fs.readdirSync('public/' + sourcePath).forEach(function(currentItem) {
@@ -15,22 +18,19 @@ function gatherPhotos(sourcePath) {
 
 function imageBasePath() {
     var path = "";
-    if (process.env.NODE_ENV === 'production') {
-        path = "https://raw.githubusercontent.com/jfposton/engagement/master/public/";
-    }
     return path;
 }
 
 function common() {
-
+    var appExtenstionPrefix = isProduction() ? '.min' : '';
     return {
         head: {
             title: "Toast to Poston",
             link: [
                 "vendor/bootstrap/dist/css/bootstrap.min.css",
                 "vendor/animate.css/animate.min.css",
-                "stylesheets/site.css",
-                "stylesheets/photos.css"
+                "stylesheets/site" + appExtenstionPrefix + ".css",
+                "stylesheets/photos" + appExtenstionPrefix + ".css"
             ]
         },
         scripts: [
@@ -39,17 +39,18 @@ function common() {
             "vendor/stellar.js/jquery.stellar.min.js",
             "vendor/headroom.js/dist/headroom.min.js",
             "vendor/masonry/dist/masonry.pkgd.js",
-            "javascripts/site.js",
+            "javascripts/site" + appExtenstionPrefix + ".js",
         ],
         imageBasePath: imageBasePath()
     };
 }
 
 function weddingInfo() {
+    var appExtenstionPrefix = isProduction() ? '.min' : '';
     var commonData = setImagePath("images/weddinginformation.jpg");
     var requiredScripts = [
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeAbSkSOLay6SjLAAldJlOPpKjdktwF4",
-        "javascripts/map.js"
+        "javascripts/map" + appExtenstionPrefix + ".js"
     ];
     requiredScripts.forEach(function(currentValue) {
         commonData.scripts.push(currentValue);
