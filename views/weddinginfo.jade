@@ -63,21 +63,16 @@ block text
                                     | Best Western
             div.col-xs-12.col-md-10.pull-right#location-map
     div.row
-        if registrations.length > 0
-            +genericpanel("Registrations", "primary")
-                div.row
-                    div.col-xs-12.col-md-4.col-md-offset-2
-                        div.thumbnail
-                            a(href="http://www.belk.com/bridalregistry/bridal_registry_view.jsp?selectedGRHID=8727923305215104" target="_blank")
-                                img(src="/images/registrations/belk.png" height="200px" class="registration")
-                    div.col-xs-12.col-md-4
-                        div.thumbnail
-                            a(href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542913733" target="_blank")
-                                img(src="/images/registrations/bb&b.png" height="200px" class="registration")
-        else
-            +genericpanel("Registrations", "warning")
-                h2.text-center
-                    | Information coming soon!
+        +genericpanel("Registrations", "primary")
+            div.row
+                div.col-xs-12.col-md-4.col-md-offset-2
+                    div.thumbnail
+                        a(href="http://www.belk.com/bridalregistry/bridal_registry_view.jsp?selectedGRHID=8727923305215104" target="_blank")
+                            img(src="/images/registrations/belk.png" height="200px" class="registration")
+                div.col-xs-12.col-md-4
+                    div.thumbnail
+                        a(href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542913733" target="_blank")
+                            img(src="/images/registrations/bb&b.png" height="200px" class="registration")
         +genericpanel("Song Selection", "success")
             div#song-selection
                 h4 We need your help!
