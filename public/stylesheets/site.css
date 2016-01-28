@@ -178,3 +178,7 @@ img.center-block.photos-photo {
 .col-md-offset-half {
     margin-left: 4.166666665%;
 }
+
+.registration {
+    height: 10em !important;
+}
