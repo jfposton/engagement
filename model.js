@@ -18,6 +18,9 @@ function gatherPhotos(sourcePath) {
 
 function imageBasePath() {
     var path = "";
+    if (isProduction()) {
+        path = "https://raw.githubusercontent.com/jfposton/engagement/master/public/";
+    }
     return path;
 }
 

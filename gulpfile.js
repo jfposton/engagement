@@ -20,7 +20,7 @@ function minifyJs(file) {
         type: 'gcc',
         fileIn: 'public/javascripts/' + file + '.js',
         fileOut: 'public/javascripts/' + file + '.min.js',
-        callback: function(err, min){
+        callback: function(err){
             console.log(err);
         }
     });
@@ -32,7 +32,7 @@ function minifyCss(file) {
         type: 'yui-css',
         fileIn: 'public/stylesheets/' + file + '.css',
         fileOut: 'public/stylesheets/' + file + '.min.css',
-        callback: function(err, min){
+        callback: function(err){
             console.log(err);
         }
     });
