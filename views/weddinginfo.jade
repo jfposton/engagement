@@ -29,7 +29,9 @@ block text
             div.col-xs-12.col-md-12.col-lg-12.col-xl-12
                 div.alert.alert-info.show
                     h4
-                        | We will be blocking rooms at the FairField Inn. More information about these rooms will be available soon.
+                            | We have blocked rooms at the Fairfield Inn & Suites in Elizabeth City.
+                            a(onClick="showHotelModal()")
+                                |  Click here for information!
         div.row
             div.col-xs-12.col-md-0.col-lg-0.col-xl-0
                 div.alert.alert-info(role="alert")
@@ -107,4 +109,6 @@ block text
                             th Song Artist
                             th Suggestion Count
                     tbody
+
     include common/footer.jade
+

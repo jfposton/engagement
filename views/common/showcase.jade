@@ -22,3 +22,14 @@ block content
         img.showcase(src=showcaseImagePath)
         div.container
             block text
+    div.modal.fade#displayModal(tabindex="-1" role="dialog")
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    button.close( type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true")
+                            | &times;
+                    h4.modal-title
+                        | Modal title
+                div.modal-body
+                    p

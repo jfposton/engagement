@@ -137,3 +137,10 @@ $('#galleryModal').on('show.bs.modal', function (event) {
 $('#taylor-quotes.carousel').on('slid.bs.carousel', function () {
     $(this).height($(this).find('div.carousel-inner').height() + 50 + "px");
 });
+
+function showHotelModal() {
+    var modal = $('#displayModal');
+    modal.find('h4.modal-title').text("Fairfield Inn & Suites Room Arrangement");
+    modal.find('div.modal-body p').html("<ul><li>Call Fairfield at <a href='tel:252-333-1003'>252-333-1003</a></li><li>Ask for the Dozier/Poston Wedding block</li><li>Make sure you call before March 29th!</li></ul> If you take advantage of this, you'll get a 10% discount!");
+    modal.modal();
+}
