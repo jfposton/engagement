@@ -14,7 +14,7 @@ router.get('/gallery', common.renderTemplate('gallery'));
 router.get('/credits', common.renderTemplate('credits'));
 
 router.get('/songsuggestions', function (req, res) {
-    common.Song.findAll({order: [['count', 'DESC']]}).then(function(songs) {
+    common.Song.findAll().then(function(songs) {
         res.json(songs);
     });
 });
