@@ -1,5 +1,5 @@
 var semver = require("semver");
-if (!semver.satisfies(process.version, '^1.6.0')) {
+if (!semver.satisfies(process.version, '^5.2.0')) {
     console.log("Can't execute zombie tests due to node version requirements");
     return;
 }
