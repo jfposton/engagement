@@ -1,10 +1,11 @@
+extends common/showcase
 mixin imagePanel(image)
     div.thumbnail
         img.bridal-party(src=image)
         div.caption
             block
 
-extends common/showcase
+
 block title
     | Bridal Party
 block text
@@ -92,4 +93,4 @@ block text
                      | caring, gentle, athletic (so athletic), bread-loving, smart,
                      | adventurous, and beautiful sister-in-law-to-be standing beside
                      | me on our big day!
-    include common/footer.jade
+    include common/footer.pug

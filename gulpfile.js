@@ -1,20 +1,20 @@
 var gulp = require('gulp');
 var jasmine = require('gulp-jasmine');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var locals = require('./model.js');
 var bower = require('gulp-bower');
 
 function compile(file) {
     "use strict";
-    gulp.src('./views/' + file + '.jade')
-        .pipe(jade({
+    gulp.src('./views/' + file + '.pug')
+        .pipe(pug({
             locals: locals(file)
         }))
         .pipe(gulp.dest('./public'));
 }
 
 gulp.task('default', ['tests']);
-gulp.task('postinstall', ['bower', 'compile-jade']);
+gulp.task('postinstall', ['bower', 'compile-templates']);
 
 gulp.task('tests', function () {
     "use strict";
@@ -25,7 +25,7 @@ gulp.task('bower', function() {
     return bower({cmd: 'update'});
 });
 
-gulp.task('compile-jade', function () {
+gulp.task('compile-templates', function () {
     "use strict";
     // Compiled templates should always be ready for production
     var originalEnv = process.env.NODE_ENV;

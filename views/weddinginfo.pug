@@ -1,3 +1,4 @@
+extends common/showcase
 mixin map(title, type)
         div.col-xs-12.col-md-12.col-lg-12.col-xl-12
             div.panel(class="panel-#{type}")
@@ -14,7 +15,7 @@ mixin genericpanel(title, type)
                 div.panel-body
                     block
 
-extends common/showcase
+
 block title
     | Wedding Information
 block text
@@ -110,5 +111,5 @@ block text
                             th Suggestion Count
                     tbody
 
-    include common/footer.jade
+    include common/footer.pug
 

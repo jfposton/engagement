@@ -1,9 +1,10 @@
+extends common/layout
 mixin thumbnail(src, index)
     div.col-xs-6.col-md-4.grid-item.clickable
         a.thumbnail(data-toggle="modal", data-target="div.modal", data-index=index)
                 img.image(src=src)
 
-extends common/layout
+
 block title
     | Photo Gallery
 block content
@@ -59,4 +60,4 @@ block content
                         a.right.carousel-control(href="#galleryCarousel", role="button", data-slide="next")
                             span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
                             span.sr-only= "Next"
-    include common/footer.jade
+    include common/footer.pug

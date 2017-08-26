@@ -1,3 +1,4 @@
+extends layout
 mixin caroselIndicators(target, quantity)
     ol.carousel-indicators
         li.active(data-target=target, data-slide-to=0)
@@ -15,7 +16,6 @@ mixin photo(path)
         img.center-block.photos-photo(src=path)
 
 
-extends layout
 
 block content
     div#contents
