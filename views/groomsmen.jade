@@ -1,11 +1,10 @@
-extends common/showcase
 mixin imagePanel(image)
     div.thumbnail
         img.bridal-party(src=image, height="500px")
         div.caption
             block
 
-
+extends common/showcase
 block title
     | Groomsmen
 block text
@@ -70,4 +69,4 @@ block text
                     | time catching up. It only seems right to have my first friend
                     | stand beside me on this special day.
 
-    include common/footer.pug
+    include common/footer.jade

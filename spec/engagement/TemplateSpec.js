@@ -1,9 +1,9 @@
-var pug = require('pug');
+var jade = require('jade');
 var model = require('../../model');
 var baseTemplatePath = __dirname + '/../../views/';
 
 function renderTemplate(template) {
-    pug.compileFile(baseTemplatePath + template + '.pug', {self: model(template)});
+    jade.compileFile(baseTemplatePath + template + '.jade', {self: model(template)});
 }
 describe("Routes", function() {
   beforeEach(function() {
