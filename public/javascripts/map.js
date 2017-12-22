@@ -113,6 +113,6 @@ if (google == undefined) {
         }
     }
 
-    $(window).load(displayAlert);
+    $(window).on('load', displayAlert);
     $(window).resize(displayAlert);
 }

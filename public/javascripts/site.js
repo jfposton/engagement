@@ -113,7 +113,7 @@ function adjustContentsTop()
     $('body').scrollTop(0);
 }
 
-$(window).load(function() {
+$(window).on('load', function() {
     adjustContentsTop();
     $('.grid').masonry();
     $('#cover').hide();

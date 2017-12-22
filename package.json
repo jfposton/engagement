@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "./test.sh",
     "start": "./bin/www",
     "postinstall": "HOME=$OPENSHIFT_REPO_DIR ./node_modules/gulp/bin/gulp.js postinstall"
   },
@@ -23,14 +22,11 @@
     "gulp-jasmine": "^2.1.0",
     "image-type": "^2.0.2",
     "jade": "~1.11.0",
-    "jasmine": "^2.3.2",
-    "jshint": "^2.8.0",
     "morgan": "~1.7.0",
     "read-chunk": "^1.0.1",
     "semver": "^5.0.3",
     "sequelize": "^3.12.2",
     "serve-favicon": "~2.3.0",
-    "sqlite3": "^3.1.0",
-    "zombie": "4.2.1"
+    "sqlite3": "^3.1.0"
   }
 }
